@@ -2,7 +2,7 @@
 
 **Track:** Agriculture — crop advisory and market literacy
 **Model:** Qwen3 1.7B, QLoRA fine-tuned, GGUF Q4_K_M (1.03 GB)
-**Team:** ferrarri — feoluwa Oyelakin ([email/name pending final confirmation — see internal notes]), GitHub handle pending
+**Team:** ferrarri — feoluwa Oyelakin (oyeife@gmail.com), GitHub: ifenium
 
 ---
 
