@@ -1,15 +1,9 @@
 #!/bin/bash
 # Downloads the submitted GGUF to model/ (idempotent, no credentials required).
-#
-# TODO before submission: the weight file is not yet hosted publicly. Upload
-# models/Qwen3-1.7B-agri-final-Q4_K_M.gguf
-# (sha256: 9c2241433b92a2ba45bab9e1eee398d774b8884030885c37ec0c141fd1bca5ce)
-# to a public Hugging Face repo, GitHub Release asset, or other stable public
-# URL, then set MODEL_URL below.
-# This is a hosting decision, not made here -- pick where it goes.
+# Weights hosted as a GitHub Release asset on this same repo.
 set -euo pipefail
 
-MODEL_URL="TODO-set-public-download-url"
+MODEL_URL="https://github.com/ifenium/farmgate-adtc-2026/releases/download/v1.0-model/Qwen3-1.7B-agri-final-Q4_K_M.gguf"
 MODEL_PATH="model/Qwen3-1.7B-agri-final-Q4_K_M.gguf"
 EXPECTED_SHA256="9c2241433b92a2ba45bab9e1eee398d774b8884030885c37ec0c141fd1bca5ce"
 
