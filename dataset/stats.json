@@ -1,0 +1,40 @@
+{
+  "total": 1200,
+  "by_family_subtype": {
+    "abstention_negative/beyond_cutoff": 100,
+    "abstention_negative/gap_within_range": 100,
+    "cross_market_ranking/full_rank": 53,
+    "cross_market_ranking/highest": 53,
+    "cross_market_ranking/lowest": 54,
+    "state_at_time/local_currency": 200,
+    "state_at_time/usd_converted": 200,
+    "trend_change/fall": 79,
+    "trend_change/flat": 32,
+    "trend_change/rise": 129,
+    "yoy_comparison/fall": 68,
+    "yoy_comparison/flat": 24,
+    "yoy_comparison/rise": 108
+  },
+  "by_split": {
+    "test": 150,
+    "train": 900,
+    "val": 150
+  },
+  "by_family_and_split": {
+    "abstention_negative/test": 26,
+    "abstention_negative/train": 150,
+    "abstention_negative/val": 24,
+    "cross_market_ranking/test": 19,
+    "cross_market_ranking/train": 120,
+    "cross_market_ranking/val": 21,
+    "state_at_time/test": 50,
+    "state_at_time/train": 300,
+    "state_at_time/val": 50,
+    "trend_change/test": 30,
+    "trend_change/train": 180,
+    "trend_change/val": 30,
+    "yoy_comparison/test": 25,
+    "yoy_comparison/train": 150,
+    "yoy_comparison/val": 25
+  }
+}

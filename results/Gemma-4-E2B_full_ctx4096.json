@@ -1,0 +1,13 @@
+{
+  "model": "gemma-4-E2B-it-UD-Q4_K_XL.gguf",
+  "n_ctx": "4096",
+  "n_prompt": 3968,
+  "n_gen": 128,
+  "pp_tokens_per_sec": 119.22,
+  "tg_tokens_per_sec": 50.22,
+  "peak_rss_mb": 3999.42,
+  "steady_state_rss_mb": 3275.12,
+  "cpu_percent_p99": 91.1,
+  "core_temp_c_peak": null,
+  "throttled": false
+}

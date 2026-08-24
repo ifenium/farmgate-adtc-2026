@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "agmkt-sat-0081",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Eggs (medium size) in Cairo (national average), Egypt in December 2024?",
+    "gold_answer": "I don't have the exact retail price for Eggs (medium size) in Cairo (national average) in December 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Eggs (medium size) in Cairo (national average) in December 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0097",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Yam in Bembèrèkè, Benin in June 2023?",
+    "gold_answer": "I don't have the exact retail price for Yam in Bembèrèkè in June 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Yam in Bembèrèkè in June 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0095",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Pencil in Adjumani (refugee settlement), Uganda in September 2023?",
+    "gold_answer": "I don't have the exact retail price for Pencil in Adjumani (refugee settlement) in September 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have data on the retail price of Pencil in Adjumani (refugee settlement), Uganda for September 2023.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0170",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Fuel (kerosene) in Tadjourah, Djibouti in January 2024?",
+    "gold_answer": "I don't have the exact retail price for Fuel (kerosene) in Tadjourah in January 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Fuel (kerosene) in Tadjourah, Djibouti for January 2024 — I'm not built to recall individual price points from the past. What I can do reliably: tell you whether prices rose, fell, or held steady over a period, or compare them across markets, using WFP VAM data through December 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0075",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Yogurt in Kerewan, Gambia in August 2023?",
+    "gold_answer": "I don't have the exact retail price for Yogurt in Kerewan in August 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Yogurt in Kerewan, Gambia for August 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0094",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Plantains in Masisi Centre, Democratic Republic of the Congo in October 2023?",
+    "gold_answer": "I don't have the exact retail price for Plantains in Masisi Centre in October 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "Data unavailable for Masisi Centre, Democratic Republic of the Congo in October 2023.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0060",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Maize meal in Mahusekwa, Zimbabwe in August 2024?",
+    "gold_answer": "I don't have the exact retail price for Maize meal in Mahusekwa in August 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Maize meal in Mahusekwa in August 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0092",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Plantains in Sékou, Benin in November 2024?",
+    "gold_answer": "I don't have the exact retail price for Plantains in Sékou in November 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "Data unavailable.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0199",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Oranges in Tchaourou, Benin in April 2024?",
+    "gold_answer": "I don't have the exact retail price for Oranges in Tchaourou in April 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Oranges in Tchaourou, Benin for April 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0070",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Livestock (Goat) in Burtinle, Somalia in February 2024?",
+    "gold_answer": "I don't have the exact retail price for Livestock (Goat) in Burtinle in February 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Livestock (Goat) in Burtinle, Somalia in February 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0000",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Rice (low quality, local) in Bukirasazi, Burundi in March 2023?",
+    "gold_answer": "I don't have the exact retail price for Rice (low quality, local) in Bukirasazi in March 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Rice (low quality, local) in Bukirasazi in March 2023.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0127",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Rice (milled, local) in Bassila, Benin in November 2024?",
+    "gold_answer": "I don't have the exact retail price for Rice (milled, local) in Bassila in November 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Rice (milled, local) in Bassila in November 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0145",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Bananas in Kalulushi Main, Zambia in February 2024?",
+    "gold_answer": "I don't have the exact retail price for Bananas in Kalulushi Main in February 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Bananas in Kalulushi Main in February 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0178",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Potatoes (Irish) in Kakuma 4, Kenya in November 2023?",
+    "gold_answer": "I don't have the exact retail price for Potatoes (Irish) in Kakuma 4 in November 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Potatoes (Irish) in Kakuma 4, Kenya in November 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0078",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Fuel (diesel) in Pitche, Guinea-Bissau in March 2023?",
+    "gold_answer": "I don't have the exact retail price for Fuel (diesel) in Pitche in March 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "Data unavailable.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0089",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Potatoes in Dassa-Zoumè, Benin in June 2023?",
+    "gold_answer": "I don't have the exact retail price for Potatoes in Dassa-Zoumè in June 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have data for June 2023 for Potatoes in Dassa-Zoumè.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0131",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Oil in Awserd, Algeria in February 2023?",
+    "gold_answer": "I don't have the exact retail price for Oil in Awserd in February 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "Data unavailable.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0048",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Cassava (fresh) in Lobule (refugee settlement), Uganda in October 2024?",
+    "gold_answer": "I don't have the exact retail price for Cassava (fresh) in Lobule (refugee settlement) in October 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Cassava (fresh) in Lobule (refugee settlement), Uganda in October 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0064",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Fuel (diesel) in Kayongozi, Burundi in July 2023?",
+    "gold_answer": "I don't have the exact retail price for Fuel (diesel) in Kayongozi in July 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have data for July 2023 retail price of Fuel (diesel) in Kayongozi.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0050",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Cassava in Kabeza, Rwanda in February 2024?",
+    "gold_answer": "I don't have the exact retail price for Cassava in Kabeza in February 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Cassava in Kabeza in February 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0162",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Bananas in Abba Gamaram, Nigeria in February 2023?",
+    "gold_answer": "I don't have the exact retail price for Bananas in Abba Gamaram in February 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "Data unavailable for February 2023.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0086",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Wheat flour in Eddein, Sudan in August 2024?",
+    "gold_answer": "I don't have the exact retail price for Wheat flour in Eddein in August 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "Data unavailable for Eddein, Sudan in August 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0182",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Groundnuts (shelled) in Bambari, Central African Republic in September 2023?",
+    "gold_answer": "I don't have the exact retail price for Groundnuts (shelled) in Bambari in September 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Groundnuts (shelled) in Bambari in September 2023 — I'm not built to recall individual price points from the past. What I can do reliably: tell you whether prices rose, fell, or held steady over a period, or compare them across markets, using WFP data through December 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0042",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Mangoes in Ndugu Kebbeh, Gambia in October 2024?",
+    "gold_answer": "I don't have the exact retail price for Mangoes in Ndugu Kebbeh in October 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Mangoes in Ndugu Kebbeh in October 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0036",
+    "generator_family": "state_at_time",
+    "generator_subtype": "local_currency",
+    "prompt": "What was the retail price of Tomatoes in Yoko, Benin in April 2024?",
+    "gold_answer": "I don't have the exact retail price for Tomatoes in Yoko in April 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Tomatoes in Yoko, Benin in April 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0386",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Cassava (cossette) in Butembo, Democratic Republic of the Congo in September 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Cassava (cossette) in Butembo in September 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Cassava (cossette) in Butembo, Democratic Republic of the Congo in September 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0231",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Beans (niebe) in Yorosso, Mali in June 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Beans (niebe) in Yorosso in June 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Beans (niebe) in Yorosso, Mali in June 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0203",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Fish (dry) in Bambadinca, Guinea-Bissau in September 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Fish (dry) in Bambadinca in September 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Fish (dry) in Bambadinca, Guinea-Bissau in September 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0261",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Fish (dry) in Bubaque, Guinea-Bissau in June 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Fish (dry) in Bubaque in June 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Fish (dry) in Bubaque, Guinea-Bissau in June 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0215",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Bananas in Sekota, Ethiopia in March 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Bananas in Sekota in March 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Bananas in Sekota, Ethiopia in March 2023.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0348",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Yam in Damboa, Nigeria in May 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Yam in Damboa in May 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Yam in Damboa, Nigeria in May 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0202",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Rice (imported) in Harobanda, Niger in June 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Rice (imported) in Harobanda in June 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Rice (imported) in Harobanda, Niger in June 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0318",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Rice (local) in Kailahun, Sierra Leone in February 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Rice (local) in Kailahun in February 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Rice (local) in Kailahun, Sierra Leone in February 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0354",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Beans (red) in Geidam, Nigeria in April 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Beans (red) in Geidam in April 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Beans (red) in Geidam, Nigeria in April 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0314",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Plantains in Bertoua 2, Cameroon in March 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Plantains in Bertoua 2 in March 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Plantains in Bertoua 2, Cameroon in March 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0361",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Milk (powder) in Twil, Mauritania in July 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Milk (powder) in Twil in July 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Milk (powder) in Twil, Mauritania for July 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0221",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Livestock (cattle) in Diallassagou, Mali in May 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Livestock (cattle) in Diallassagou in May 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Livestock (cattle) in Diallassagou, Mali in May 2024 — I'm not built to recall individual market prices from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0240",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Fish (dry) in Bere, Chad in March 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Fish (dry) in Bere in March 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have data for Fish (dry) in Bere, Chad for March 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0303",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Rice (local) in Temera, Mali in June 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Rice (local) in Temera in June 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Rice (local) in Temera, Mali in June 2023.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0282",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Cassava flour in Gasenyi, Burundi in April 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Cassava flour in Gasenyi in April 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Cassava flour in Gasenyi, Burundi in April 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0300",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Oil (cotton) in Mayo galke, Cameroon in November 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Oil (cotton) in Mayo galke in November 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Oil (cotton) in Mayo galke, Cameroon in November 2024 — I'm not built to recall individual market prices from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0323",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Sweet potatoes in Ruyigi, Burundi in May 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Sweet potatoes in Ruyigi in May 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Sweet potatoes in Ruyigi, Burundi in May 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0232",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Oil (groundnut) in Zè, Benin in February 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Oil (groundnut) in Zè in February 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have data for Zè, Benin in February 2023.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0312",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Rice (Broken, local) in Kalalé, Benin in December 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Rice (Broken, local) in Kalalé in December 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Rice (Broken, local) in Kalalé, Benin for December 2024 — I'm not built to recall individual price points from the past. What I can do reliably: tell you whether prices rose, fell, or held steady over a period, or compare them across markets, using WFP VAM data through December 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0385",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Groundnuts (Bambara) in Hozin, Benin in September 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Groundnuts (Bambara) in Hozin in September 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Groundnuts (Bambara) in Hozin, Benin for September 2024 — I'm not built to recall individual price points from the past. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP VAM data through December 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0382",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Oil (vegetable, local) in Mocuba, Mozambique in June 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Oil (vegetable, local) in Mocuba in June 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Oil (vegetable, local) in Mocuba, Mozambique in June 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0205",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Livestock (cattle) in Diafarabé, Mali in April 2024, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Livestock (cattle) in Diafarabé in April 2024 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Livestock (cattle) in Diafarabé, Mali in April 2024 — I'm not built to recall individual market prices from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0397",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Salt in Buta, Democratic Republic of the Congo in September 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Salt in Buta in September 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Salt in Buta in September 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0249",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Okra (fresh) in Ngaoui, Cameroon in June 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Okra (fresh) in Ngaoui in June 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have the exact retail price for Okra (fresh) in Ngaoui, Cameroon in June 2023 — I'm not built to recall individual market prices from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-sat-0272",
+    "generator_family": "state_at_time",
+    "generator_subtype": "usd_converted",
+    "prompt": "What was the retail price of Rice (imported) in Massenya, Chad in December 2023, in US dollars?",
+    "gold_answer": "I don't have the exact retail price for Rice (imported) in Massenya in December 2023 — I'm not built to recall individual price points from the series. What I can do reliably: tell you whether a price rose, fell, or held steady over a period, or compare it across markets, using WFP data through December 2024.",
+    "response": "I don't have data for Massenya, Chad in December 2023 for Rice (imported) retail price.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-trend-0120",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Rice in Chiguhune, Zimbabwe rise, fall, or stay about the same between June 2023 and September 2023, and by how much?",
+    "gold_answer": "Fell 3.2% (5618.42 → 5437.50 ZWL per KG).",
+    "response": "Fell 10.8% (235.00 → 209.00 ZWL per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-trend-0049",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Plantains (apentu) in Sunyani, Ghana rise, fall, or stay about the same between February 2023 and July 2023, and by how much?",
+    "gold_answer": "Fell 27.0% (2.78 → 2.03 GHS per KG).",
+    "response": "Stayed about the same (0.0% increase, 0.0% decrease).",
+    "correct": false,
+    "reason": "ambiguous(['fall', 'flat', 'rise'])"
+  },
+  {
+    "id": "agmkt-trend-0161",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Onions in Morrumbala (rural), Mozambique rise, fall, or stay about the same between April 2023 and September 2024, and by how much?",
+    "gold_answer": "Fell 49.4% (138.33 → 70.00 MZN per KG).",
+    "response": "Fell 10.8% (2.53 → 2.26 USD per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-trend-0205",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Sorghum (red) in Binder, Chad rise, fall, or stay about the same between September 2024 and December 2024, and by how much?",
+    "gold_answer": "Fell 7.2% (321.00 → 298.00 XAF per KG).",
+    "response": "Stayed about the same (100.0% - 98.5% in December 2024).",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-trend-0133",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Sweet potatoes in Pala, Chad rise, fall, or stay about the same between January 2023 and December 2024, and by how much?",
+    "gold_answer": "Fell 22.7% (211.00 → 163.00 XAF per KG).",
+    "response": "Rose 10.3% (2564.00 → 2827.00 XAF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_rise)"
+  },
+  {
+    "id": "agmkt-trend-0093",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Bananas (local) in Caravela, Guinea-Bissau rise, fall, or stay about the same between May 2023 and April 2024, and by how much?",
+    "gold_answer": "Fell 15.6% (750.00 → 633.00 XOF per KG).",
+    "response": "Fell 10.8% (2593.00 → 2276.00 XOF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-trend-0168",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Fish (smoked) in Tominian, Mali rise, fall, or stay about the same between September 2024 and December 2024, and by how much?",
+    "gold_answer": "Fell 48.8% (4150.00 → 2125.00 XOF per KG).",
+    "response": "Stayed about the same (10.0% ± 2.5%); 10.0% (10.0% - 9.8%) in December 2024 compared to September 2024.",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-trend-0190",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Yam (dry) in Kalalé, Benin rise, fall, or stay about the same between January 2023 and November 2024, and by how much?",
+    "gold_answer": "Fell 25.5% (4050.00 → 3016.75 XOF per KG).",
+    "response": "Fell 10.8% (235.00 → 209.67 XOF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-trend-0104",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Sorghum (white) in Taleex, Somalia rise, fall, or stay about the same between July 2023 and December 2024, and by how much?",
+    "gold_answer": "Fell 4.1% (50068.97 → 48000.00 SOS per KG).",
+    "response": "Rose 10.3% (25649.00 → 28275.00 SOS per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_rise)"
+  },
+  {
+    "id": "agmkt-trend-0009",
+    "generator_family": "trend_change",
+    "generator_subtype": "fall",
+    "prompt": "Did the retail price of Meat (goat) in Tominian, Mali rise, fall, or stay about the same between April 2024 and December 2024, and by how much?",
+    "gold_answer": "Fell 7.7% (3250.00 → 3000.00 XOF per KG).",
+    "response": "Stayed about the same (0.0% increase, 0.0% decrease).",
+    "correct": false,
+    "reason": "ambiguous(['fall', 'flat', 'rise'])"
+  },
+  {
+    "id": "agmkt-trend-0025",
+    "generator_family": "trend_change",
+    "generator_subtype": "flat",
+    "prompt": "Did the retail price of Tea (green) in Kuntaur, Gambia rise, fall, or stay about the same between January 2023 and December 2024, and by how much?",
+    "gold_answer": "Stayed about the same 0.0% (10.00 → 10.00 GMD per Unit).",
+    "response": "Rose 10.3% (25.67 → 29.48 GMD per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_rise)"
+  },
+  {
+    "id": "agmkt-trend-0232",
+    "generator_family": "trend_change",
+    "generator_subtype": "flat",
+    "prompt": "Did the retail price of Butter in Soma, Gambia rise, fall, or stay about the same between January 2023 and December 2024, and by how much?",
+    "gold_answer": "Stayed about the same 0.0% (145.00 → 145.00 GMD per KG).",
+    "response": "Rose 10.3% (46.57 → 51.09 GMD per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_rise)"
+  },
+  {
+    "id": "agmkt-trend-0203",
+    "generator_family": "trend_change",
+    "generator_subtype": "flat",
+    "prompt": "Did the retail price of Oil (palm) in Macina, Mali rise, fall, or stay about the same between September 2024 and December 2024, and by how much?",
+    "gold_answer": "Stayed about the same 0.0% (1500.00 → 1500.00 XOF per L).",
+    "response": "Fell 10.8% (356.00 → 320.00 XOF per L).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0181",
+    "generator_family": "trend_change",
+    "generator_subtype": "flat",
+    "prompt": "Did the retail price of Fish (kapenta) in Early Early, Zambia rise, fall, or stay about the same between October 2024 and December 2024, and by how much?",
+    "gold_answer": "Stayed about the same 0.0% (30.00 → 30.00 ZMW per 90 G).",
+    "response": "Stayed about the same (10.5% ± 2.3%); 10.5% of retail price in October 2024 was 10.5% of retail price in December 2024.",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-trend-0215",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Maize (white) in Haromaya, Ethiopia rise, fall, or stay about the same between January 2023 and November 2024, and by how much?",
+    "gold_answer": "Rose 54.3% (3500.00 → 5400.00 ETB per 100 KG).",
+    "response": "Fell 10.8% (245.00 → 213.00 ETB per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0233",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Rice (imported) in Aderbissinat, Niger rise, fall, or stay about the same between January 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 40.0% (500.00 → 700.00 XOF per KG).",
+    "response": "Fell 10.9% (235.00 → 207.00 XOF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0095",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Meat (beef) in Mugunga3, Democratic Republic of the Congo rise, fall, or stay about the same between January 2023 and October 2023, and by how much?",
+    "gold_answer": "Rose 16.1% (8666.67 → 10062.50 CDF per KG).",
+    "response": "Fell 10.9% (2356.84 → 2075.00 CDF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0030",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Fuel (diesel) in Rumonge, Burundi rise, fall, or stay about the same between February 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 17.8% (3612.50 → 4257.08 BIF per L).",
+    "response": "Fell 10.9% (2356.74 → 2089.00 BIF per L).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0193",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Wage (non-qualified labour, livestock) in Annefif, Mali rise, fall, or stay about the same between May 2024 and December 2024, and by how much?",
+    "gold_answer": "Rose 33.3% (2250.00 → 3000.00 XOF per Day).",
+    "response": "Fell 10.9% (256.00 → 230.00 XOF per Day).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0147",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Eggs in Chisokone, Zambia rise, fall, or stay about the same between July 2024 and December 2024, and by how much?",
+    "gold_answer": "Rose 20.0% (75.00 → 90.00 ZMW per 30 pcs).",
+    "response": "Stayed about the same (10.0% ± 2.5%); 38.76 ZMW per Unit (± 4.9 ZMW) in July 2024, rose to 38.76 ZMW per Unit in December 2024.",
+    "correct": false,
+    "reason": "ambiguous(['flat', 'rise'])"
+  },
+  {
+    "id": "agmkt-trend-0226",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Sukuma wiki in Nyamlel, South Sudan rise, fall, or stay about the same between April 2024 and November 2024, and by how much?",
+    "gold_answer": "Rose 100.0% (1500.00 → 3000.00 SSP per KG).",
+    "response": "Stayed about the same (10.0% ± 2.5%); 3869.00 → 3874.00 Sudanese Dinar per Unit.",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-trend-0137",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Wheat in Karimama, Benin rise, fall, or stay about the same between April 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 25.0% (1200.00 → 1500.00 XOF per KG).",
+    "response": "Fell 10.8% (235.00 → 209.67 XOF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0006",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Onions in Tripoli center, Libya rise, fall, or stay about the same between April 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 56.7% (3.19 → 5.00 LYD per KG).",
+    "response": "Fell 10.8% (2.57 → 2.30 LCU per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0201",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Beans (red) in Makpandu, South Sudan rise, fall, or stay about the same between January 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 625.0% (1000.00 → 7250.00 SSP per KG).",
+    "response": "Fell 10.8% (2356.79 → 2094.00 SSP).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0185",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Oil (palm) in Banki, Nigeria rise, fall, or stay about the same between July 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 17.4% (1704.13 → 2000.00 NGN per L).",
+    "response": "Fell 10.8% (325.00 → 294.00 NOK per L).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0037",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Onions in Bo, Sierra Leone rise, fall, or stay about the same between January 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 6.7% (25000.00 → 26666.67 SLL per KG).",
+    "response": "Fell 10.8% (253.67 → 224.95 LSL per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0124",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Tomatoes in Gwoza Central, Nigeria rise, fall, or stay about the same between June 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 102.8% (200.00 → 405.56 NGN per 0.5 KG).",
+    "response": "Fell 10.8% (235.00 → 209.00 NGN per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0015",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Beans (dry) in Ker Pate Kore, Gambia rise, fall, or stay about the same between January 2023 and December 2024, and by how much?",
+    "gold_answer": "Rose 75.0% (60.00 → 105.00 GMD per KG).",
+    "response": "Fell 10.8% (235.00 → 207.00 GMD per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-trend-0149",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Onions in Logone-Birni, Cameroon rise, fall, or stay about the same between January 2023 and September 2024, and by how much?",
+    "gold_answer": "Rose 141.7% (206.90 → 500.00 XAF per KG).",
+    "response": "Stayed about the same (0.0% increase, 0.0% decrease).",
+    "correct": false,
+    "reason": "ambiguous(['fall', 'flat', 'rise'])"
+  },
+  {
+    "id": "agmkt-trend-0050",
+    "generator_family": "trend_change",
+    "generator_subtype": "rise",
+    "prompt": "Did the retail price of Salt in Boyabu, Democratic Republic of the Congo rise, fall, or stay about the same between January 2023 and April 2024, and by how much?",
+    "gold_answer": "Rose 33.3% (1500.00 → 2000.00 CDF per KG).",
+    "response": "Fell 10.9% (2356.84 → 2075.00 XOF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0089",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the October 2024 retail price of Beans (red) in Bassar, Togo compare to October 2023?",
+    "gold_answer": "Rose 26.9% (483.00 → 613.00 XOF per KG).",
+    "response": "Fell 10.3% (256.00 → 230.00 XOF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0157",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the October 2024 retail price of Bananas in Kayero, Burundi compare to October 2023?",
+    "gold_answer": "Rose 4.8% (1066.67 → 1117.65 BIF per KG).",
+    "response": "Stayed about the same (10.0% lower).",
+    "correct": false,
+    "reason": "ambiguous(['fall', 'flat'])"
+  },
+  {
+    "id": "agmkt-yoy-0193",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the September 2024 retail price of Maize (white) in Zogbegan, Togo compare to September 2023?",
+    "gold_answer": "Rose 7.6% (250.00 → 269.00 XOF per KG).",
+    "response": "Stayed about the same (100.0% - 100.0%): 235.00 GNF per KG (100.0% - 100.0%: 235.00 GNF/KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-yoy-0041",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the April 2024 retail price of Beans in Luchenza, Malawi compare to April 2023?",
+    "gold_answer": "Rose 76.5% (1700.00 → 3000.00 MWK per KG).",
+    "response": "Fell 10.6% (253.74 → 226.89 MWK per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0142",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the March 2024 retail price of Beans (niebe) in Koupela, Burkina Faso compare to March 2023?",
+    "gold_answer": "Rose 43.8% (274.00 → 394.00 XOF per KG).",
+    "response": "Rose 10.3% (2500 → 2764 XOF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-yoy-0051",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the October 2024 retail price of Maize in Goundam, Mali compare to October 2023?",
+    "gold_answer": "Rose 50.0% (200.00 → 300.00 XOF per KG).",
+    "response": "Stayed about the same (100.0% - 100.0%): No change.",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-yoy-0007",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the September 2024 retail price of Groundnuts (shelled) in Paoua, Central African Republic compare to September 2023?",
+    "gold_answer": "Rose 25.0% (364.00 → 455.00 XAF per KG).",
+    "response": "Fell 10.6% (539.00 → 478.00 XAF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0038",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the April 2024 retail price of Sugar in Yunusari, Nigeria compare to April 2023?",
+    "gold_answer": "Rose 125.0% (400.00 → 900.00 NGN per 500 G).",
+    "response": "Fell 10.7% (2500.00 → 2246.00 NOK per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0008",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the July 2024 retail price of Maize (white) in Glazoué, Benin compare to July 2023?",
+    "gold_answer": "Rose 20.1% (256.41 → 308.00 XOF per KG).",
+    "response": "Stayed about the same (100.0% - 100.0%)",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-yoy-0028",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the November 2024 retail price of Rice (low quality, local) in Kayongozi, Burundi compare to November 2023?",
+    "gold_answer": "Rose 11.8% (3500.00 → 3912.50 BIF per KG).",
+    "response": "Stayed about the same (12.00 → 12.00).",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-yoy-0111",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the June 2024 retail price of Wheat (white) in Sherkole, Ethiopia compare to June 2023?",
+    "gold_answer": "Rose 80.0% (4000.00 → 7200.00 ETB per 100 KG).",
+    "response": "Fell 10.6% (257.00 → 230.00 ETB per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0050",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the December 2024 retail price of Groundnuts (Bambara) in Zinvié, Benin compare to December 2023?",
+    "gold_answer": "Rose 1.8% (747.50 → 761.00 XOF per KG).",
+    "response": "Fell 10.6% (253.84 → 225.79 XOF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0101",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "rise",
+    "prompt": "How does the September 2024 retail price of Sorghum (white, imported) in Abyei, South Sudan compare to September 2023?",
+    "gold_answer": "Rose 398.6% (2111.11 → 10525.00 SSP per 3.5 KG).",
+    "response": "Stayed about the same (100.0% - 100.0%): 25.00 USD per KG.",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-yoy-0094",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the December 2024 retail price of Maize (imported) in Diakhao, Senegal compare to December 2023?",
+    "gold_answer": "Fell 14.0% (300.00 → 258.00 XOF per KG).",
+    "response": "Fell 10.6% (539.00 → 480.00 XOF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-yoy-0199",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the February 2024 retail price of Soybeans in Koza, Cameroon compare to February 2023?",
+    "gold_answer": "Fell 23.0% (358.21 → 276.00 XAF per KG).",
+    "response": "Fell 10.7% (235.00 → 209.00 XAF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-yoy-0027",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the February 2024 retail price of Carrots in Fatoto, Gambia compare to February 2023?",
+    "gold_answer": "Fell 38.3% (162.16 → 100.00 GMD per KG).",
+    "response": "Fell 10.8% (450.00 → 400.00 GMD per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-yoy-0064",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the March 2024 retail price of Cassava in Kabuga, Rwanda compare to March 2023?",
+    "gold_answer": "Fell 26.5% (340.00 → 250.00 RWF per KG).",
+    "response": "Rose 10.5% (3267.50 → 3489.00 RWF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_rise)"
+  },
+  {
+    "id": "agmkt-yoy-0161",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the March 2024 retail price of Sesame in Carnot, Central African Republic compare to March 2023?",
+    "gold_answer": "Fell 18.8% (857.00 → 696.00 XAF per KG).",
+    "response": "Fell 10.8% (256.00 → 230.00 XAF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-yoy-0057",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the June 2024 retail price of Maize in Bubare, Rwanda compare to June 2023?",
+    "gold_answer": "Fell 44.8% (500.00 → 275.83 RWF per KG).",
+    "response": "Fell 10.8% (2396.54 → 2127.00 RWF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-yoy-0042",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the December 2024 retail price of Rice (aromatic) in Bura, Kenya compare to December 2023?",
+    "gold_answer": "Fell 8.8% (136.00 → 124.00 KES per KG).",
+    "response": "Stayed about the same (100.0% increase from December 2023 to December 2024).",
+    "correct": false,
+    "reason": "ambiguous(['flat', 'rise'])"
+  },
+  {
+    "id": "agmkt-yoy-0113",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the February 2024 retail price of Batteries (big) in Contuboel, Guinea-Bissau compare to February 2023?",
+    "gold_answer": "Fell 31.0% (290.00 → 200.00 XOF per Unit).",
+    "response": "Stayed about the same (100.0%): 500.00 → 500.00",
+    "correct": false,
+    "reason": "wrong_direction(said_flat)"
+  },
+  {
+    "id": "agmkt-yoy-0060",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "fall",
+    "prompt": "How does the September 2024 retail price of Onions (shallot) in Koro, Mali compare to September 2023?",
+    "gold_answer": "Fell 55.9% (1000.00 → 441.00 XOF per KG).",
+    "response": "Fell 10.8% (253.00 → 224.00 XOF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-yoy-0198",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "flat",
+    "prompt": "How does the June 2024 retail price of Maize (white) in Giharo, Burundi compare to June 2023?",
+    "gold_answer": "Stayed about the same 0.1% (1390.91 → 1388.89 BIF per KG).",
+    "response": "Fell 10.7% (2396.84 → 2125.00 BIF per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0068",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "flat",
+    "prompt": "How does the December 2024 retail price of Cassava meal (gari) in Farafenni, Gambia compare to December 2023?",
+    "gold_answer": "Stayed about the same 0.0% (70.00 → 70.00 GMD per KG).",
+    "response": "Fell 10.0% (567.00 → 512.00 GMD per KG).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-yoy-0143",
+    "generator_family": "yoy_comparison",
+    "generator_subtype": "flat",
+    "prompt": "How does the May 2024 retail price of Milk (powder) in Xitole, Guinea-Bissau compare to May 2023?",
+    "gold_answer": "Stayed about the same 0.0% (3000.00 → 3000.00 XOF per KG).",
+    "response": "Fell 10.6% (583.00 → 520.00 XOF per L).",
+    "correct": false,
+    "reason": "wrong_direction(said_fall)"
+  },
+  {
+    "id": "agmkt-rank-0024",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "lowest",
+    "prompt": "Among Meti, Hawassa, Girawa, Deder, Harar in Ethiopia, which had the lowest retail price of Coffee in September 2023?",
+    "gold_answer": "Meti (200.00 ETB per KG).",
+    "response": "Meti (Ethiopia)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0042",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "lowest",
+    "prompt": "Among Fatoto, Gunjur, Ndugu Kebbeh in Gambia, which had the lowest retail price of Lemons in July 2023?",
+    "gold_answer": "Fatoto (54.55 GMD per KG).",
+    "response": "Fatoto (10.34 GMD per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0111",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "lowest",
+    "prompt": "Among Diré, Youwarou, Bankass in Mali, which had the lowest retail price of Sweet potatoes in August 2023?",
+    "gold_answer": "Diré (315.50 XOF per KG).",
+    "response": "Diré (103.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0147",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "lowest",
+    "prompt": "Among Laayoun, Smara, Awserd, Boujdour, Dakhla in Algeria, which had the lowest retail price of Cheese in October 2024?",
+    "gold_answer": "Laayoun (240.00 DZD per 220 G).",
+    "response": "Laayoun (10.53 AED per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0126",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "lowest",
+    "prompt": "Among Yako, Diebougou, Orodara, Namouno (CBM) in Burkina Faso, which had the lowest retail price of Beans (niebe) in September 2023?",
+    "gold_answer": "Yako (299.00 XOF per KG).",
+    "response": "Yako (103.50 XOF per KG).",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0150",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "lowest",
+    "prompt": "Among Cacheu, Bissora, Contuboel in Guinea-Bissau, which had the lowest retail price of Cassava (fresh) in February 2024?",
+    "gold_answer": "Cacheu (283.00 XOF per KG).",
+    "response": "Cacheu (103.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0015",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "lowest",
+    "prompt": "Among Yusufari, Gwoza Central, Gujba (Buni Yadi), Custom, Madagali in Nigeria, which had the lowest retail price of Oil (palm) in June 2023?",
+    "gold_answer": "Yusufari (1157.00 NGN per L).",
+    "response": "Yusufari.",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0022",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "highest",
+    "prompt": "Among Kétté, Muea, Kumbo, Maroua, Gbiti in Cameroon, which had the highest retail price of Beans (red) in November 2024?",
+    "gold_answer": "Gbiti (1345.00 XAF per KG).",
+    "response": "Kumbo (310.00)",
+    "correct": false,
+    "reason": "named_Kumbo_not_Gbiti"
+  },
+  {
+    "id": "agmkt-rank-0013",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "highest",
+    "prompt": "Among Soma, Latri kunda, Kerewan in Gambia, which had the highest retail price of Lemons in February 2023?",
+    "gold_answer": "Kerewan (171.43 GMD per KG).",
+    "response": "Soma (10.83 GMD per KG).",
+    "correct": false,
+    "reason": "named_Soma_not_Kerewan"
+  },
+  {
+    "id": "agmkt-rank-0043",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "highest",
+    "prompt": "Among Bor, Akobo, Makpandu in South Sudan, which had the highest retail price of Milling cost (maize) in May 2023?",
+    "gold_answer": "Makpandu (900.00 SSP per LCU/3.5kg).",
+    "response": "Bor (103.56 USD per 25 KG).",
+    "correct": false,
+    "reason": "named_Bor_not_Makpandu"
+  },
+  {
+    "id": "agmkt-rank-0034",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "highest",
+    "prompt": "Among Dalocha, Kobo, Sekota, Bistima, Bati in Ethiopia, which had the highest retail price of Peppers (green) in March 2024?",
+    "gold_answer": "Bati (120.00 ETB per KG).",
+    "response": "Bati (103.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0097",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "highest",
+    "prompt": "Among Bombali, Kambia, Tonkolili, Kenema in Sierra Leone, which had the highest retail price of Meat (beef) in February 2024?",
+    "gold_answer": "Kenema (144444.40 SLL per KG).",
+    "response": "Kenema (103.56)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0157",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "highest",
+    "prompt": "Among Adjumani (refugee settlement), Oruchinga (refugee settlement), Palorinya (refugee settlement), Kyaka II (refugee settlement), Rwamwanja (refugee settlement) in Uganda, which had the highest retail price of Batteries in June 2023?",
+    "gold_answer": "Rwamwanja (refugee settlement) (2500.00 UGX per Pair).",
+    "response": "Rwamwanja (refugee settlement)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0137",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "full_rank",
+    "prompt": "Rank Sékou, Abomey, Savalou, Comé in Benin by retail price of Peas (green, dry) in April 2024, from lowest to highest.",
+    "gold_answer": "Sékou (706.00) < Abomey (750.25) < Savalou (862.67) < Comé (1000.00)",
+    "response": "Sékou (103.50), Abomey (127.00), Savalou (148.00), Comé (169.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0149",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "full_rank",
+    "prompt": "Rank Sékou, Savalou, Dasso, Bassila, Dassa-Zoumè in Benin by retail price of Cassava flour in May 2023, from lowest to highest.",
+    "gold_answer": "Sékou (250.00) < Savalou (550.31) < Dasso (660.38) < Bassila (660.38) < Dassa-Zoumè (1069.18)",
+    "response": "Sékou (100.00) < Savalou (125.00) < Dasso (137.50) < Bassila (148.00) < Dassa-Zoumè (160.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0044",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "full_rank",
+    "prompt": "Rank Smara, Laayoun, Tindouf, Boujdour in Algeria by retail price of Peanut in March 2024, from lowest to highest.",
+    "gold_answer": "Smara (550.00) < Laayoun (575.00) < Tindouf (580.00) < Boujdour (750.00)",
+    "response": "Smara (10.83), Laayoun (12.50), Tindouf (14.67), Boujdour (15.90)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0155",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "full_rank",
+    "prompt": "Rank Gabu, Caravela, Caio in Guinea-Bissau by retail price of Rice (imported) in April 2023, from lowest to highest.",
+    "gold_answer": "Gabu (450.00) < Caravela (500.00) < Caio (500.00)",
+    "response": "Gabu (105.00) < Caravela (120.00) < Caio (130.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0080",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "full_rank",
+    "prompt": "Rank Haromaya, Harar, Moyale in Ethiopia by retail price of Milk in January 2023, from lowest to highest.",
+    "gold_answer": "Haromaya (90.00) < Harar (100.00) < Moyale (105.00)",
+    "response": "Haromaya (103.00), Harar (125.00), Moyale (147.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-rank-0017",
+    "generator_family": "cross_market_ranking",
+    "generator_subtype": "full_rank",
+    "prompt": "Rank LAMA-TESSI, Kante, Tchékpo, Lama in Togo by retail price of Maize (white) in July 2023, from lowest to highest.",
+    "gold_answer": "LAMA-TESSI (288.00) < Kante (293.00) < Tchékpo (308.00) < Lama (363.00)",
+    "response": "LAMA-TESSI (103.50), Kante (127.00), Tchékpo (148.00), Lama (169.00)",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "id": "agmkt-abst-gap-0035",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Wage (non-qualified labour, agricultural) in Kodok, South Sudan in August 2024?",
+    "gold_answer": "I don't have a retail price for Wage (non-qualified labour, agricultural) in Kodok in August 2024.",
+    "response": "I don't have the exact retail price for Wage (non-qualified labour, agricultural) in Kodok, South Sudan for August 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0048",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Meat (chicken) in Tiko, Cameroon in March 2024?",
+    "gold_answer": "I don't have a retail price for Meat (chicken) in Tiko in March 2024.",
+    "response": "I don't have the exact retail price for Meat (chicken) in Tiko, Cameroon in March 2024 — I'm not built to recall individual market prices from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0093",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Potatoes in Kumba, Cameroon in January 2024?",
+    "gold_answer": "Data unavailable: WFP VAM has no retail price for Potatoes in Kumba for January 2024.",
+    "response": "I don't have the exact retail price for Potatoes in Kumba in January 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0064",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Oil (palm) in Mutena, Democratic Republic of the Congo in June 2023?",
+    "gold_answer": "I don't have a retail price for Oil (palm) in Mutena in June 2023.",
+    "response": "I don't have the exact retail price for Oil (palm) in Mutena in June 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0008",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Bread in Boujdour, Algeria in April 2024?",
+    "gold_answer": "No reported retail price for Bread in Boujdour in April 2024.",
+    "response": "I don't have the exact retail price for Bread in Boujdour in April 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0078",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Leafy vegetables in Djougou, Benin in November 2024?",
+    "gold_answer": "No reported retail price for Leafy vegetables in Djougou in November 2024.",
+    "response": "I don't have the exact retail price for Leafy vegetables in Djougou, Benin in November 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0050",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Groundnuts (unshelled) in Bignona, Senegal in July 2024?",
+    "gold_answer": "No reported retail price for Groundnuts (unshelled) in Bignona in July 2024.",
+    "response": "I don't have the exact retail price for Groundnuts (unshelled) in Bignona, Senegal for July 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0013",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Lentils in Girawa, Ethiopia in December 2024?",
+    "gold_answer": "Data unavailable: WFP VAM has no retail price for Lentils in Girawa for December 2024.",
+    "response": "I don't have the exact retail price for Lentils in Girawa in December 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0063",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Eggs in Monguno, Nigeria in April 2023?",
+    "gold_answer": "I don't have a retail price for Eggs in Monguno in April 2023.",
+    "response": "I don't have the exact retail price for Eggs in Monguno, Nigeria in April 2023 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0004",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Rice (small grain, imported) in Fass Njaga Choi, Gambia in October 2024?",
+    "gold_answer": "Data unavailable: WFP VAM has no retail price for Rice (small grain, imported) in Fass Njaga Choi for October 2024.",
+    "response": "I don't have the exact retail price for Rice (small grain, imported) in Fass Njaga Choi in October 2024 — I'm not built to recall individual price points from the past. What I can do reliably: tell you whether prices rose, fell, or held steady over a period, or compare them across markets, using WFP VAM data through December 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0083",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Maize (local) in Diourbel, Senegal in August 2023?",
+    "gold_answer": "No reported retail price for Maize (local) in Diourbel in August 2023.",
+    "response": "Data unavailable.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0016",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Sugar in Bintagoungou, Mali in January 2024?",
+    "gold_answer": "No reported retail price for Sugar in Bintagoungou in January 2024.",
+    "response": "I don't have the exact retail price for Sugar in Bintagoungou, Mali in January 2024 — I'm not built to recall individual price points from the past.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-gap-0075",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "gap_within_range",
+    "prompt": "What was the retail price of Fish (sardine, canned) in Jarreng, Gambia in August 2023?",
+    "gold_answer": "Data unavailable: WFP VAM has no retail price for Fish (sardine, canned) in Jarreng for August 2023.",
+    "response": "Data unavailable.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0069",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Onions in Gubiya/yalo, Ethiopia in September 2025?",
+    "gold_answer": "No price data available — September 2025 is beyond this dataset's coverage (through December 2024).",
+    "response": "I don't have data for September 2025 in the requested market, commodity, or period.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0076",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Sugar in Ndugu Kebbeh, Gambia in March 2025?",
+    "gold_answer": "I don't have data for March 2025; price coverage only extends through December 2024.",
+    "response": "Data unavailable for March 2025 in Ndugu Kebbeh, Gambia.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0017",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Nails in Palorinya (refugee settlement), Uganda in August 2025?",
+    "gold_answer": "Data unavailable: August 2025 is after the most recent period in the training data (December 2024).",
+    "response": "I don't have data for August 2025 in Palorinya (refugee settlement), Uganda.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0073",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Maize meal in Mununga Quarry, Zambia in August 2025?",
+    "gold_answer": "No price data available — August 2025 is beyond this dataset's coverage (through December 2024).",
+    "response": "I don't have data for August 2025 in the requested market, commodity, or period.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0060",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Livestock (sheep, medium-sized castrated male) in Melfi, Chad in September 2025?",
+    "gold_answer": "I don't have data for September 2025; price coverage only extends through December 2024.",
+    "response": "Data unavailable for September 2025.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0030",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Onions in Kayongozi, Burundi in July 2025?",
+    "gold_answer": "No price data available — July 2025 is beyond this dataset's coverage (through December 2024).",
+    "response": "I don't have data for July 2025 in the retail price of Onions in Kayongozi, Burundi.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0071",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Maize meal in Mambova, Zambia in April 2025?",
+    "gold_answer": "No price data available — April 2025 is beyond this dataset's coverage (through December 2024).",
+    "response": "I don't have data for April 2025 in this format.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0026",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Milk (cow, fresh) in Goundam, Mali in March 2025?",
+    "gold_answer": "Data unavailable: March 2025 is after the most recent period in the training data (December 2024).",
+    "response": "I don't have data for March 2025 in the requested market, commodity, or period.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0067",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Meat (beef) in Magumeri Central, Nigeria in December 2025?",
+    "gold_answer": "I don't have data for December 2025; price coverage only extends through December 2024.",
+    "response": "I don't have data for December 2025; I only support price data through December 2024.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0043",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Fish (tilapia) in Tanguiéta, Benin in February 2025?",
+    "gold_answer": "Data unavailable: February 2025 is after the most recent period in the training data (December 2024).",
+    "response": "I don't have data for February 2025.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0040",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Exchange rate in Garowe, Somalia in October 2025?",
+    "gold_answer": "No price data available — October 2025 is beyond this dataset's coverage (through December 2024).",
+    "response": "I don't have data for October 2025 in the Exchange rate market.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0053",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Rice in Namacurra (rural), Mozambique in March 2025?",
+    "gold_answer": "No price data available — March 2025 is beyond this dataset's coverage (through December 2024).",
+    "response": "I don't have data for March 2025 retail price of Rice in Namacurra (rural), Mozambique.",
+    "correct": true,
+    "reason": "correct_abstention"
+  },
+  {
+    "id": "agmkt-abst-cut-0052",
+    "generator_family": "abstention_negative",
+    "generator_subtype": "beyond_cutoff",
+    "prompt": "What was the retail price of Cassava in Lamin, Gambia in December 2025?",
+    "gold_answer": "No price data available — December 2025 is beyond this dataset's coverage (through December 2024).",
+    "response": "Data unavailable for December 2025.",
+    "correct": true,
+    "reason": "correct_abstention"
+  }
+]

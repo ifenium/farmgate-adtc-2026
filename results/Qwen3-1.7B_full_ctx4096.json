@@ -1,0 +1,13 @@
+{
+  "model": "Qwen3-1.7B-Q4_K_M.gguf",
+  "n_ctx": "4096",
+  "n_prompt": 3968,
+  "n_gen": 128,
+  "pp_tokens_per_sec": 216.99,
+  "tg_tokens_per_sec": 86.74,
+  "peak_rss_mb": 2658.53,
+  "steady_state_rss_mb": 2605.55,
+  "cpu_percent_p99": 58.8,
+  "core_temp_c_peak": null,
+  "throttled": false
+}

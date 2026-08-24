@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.1.0",
+  "profiler_version": "adtc-profiler 0.1.0",
+  "submission": {
+    "team_id": "dryrun-pipeline-check",
+    "domain": "agriculture",
+    "language_scope": [
+      "en"
+    ],
+    "african_alpha_claim": false,
+    "budget_laptop_claim": false,
+    "submitter": {
+      "name": "Dry Run",
+      "email": "dryrun@example.com",
+      "github_handle": "dryrun"
+    },
+    "cross_disciplinary_pairing": {
+      "discipline": "n/a",
+      "load_bearing": false,
+      "description": "Placeholder for a 5-step MLX-LM -> fuse -> GGUF -> quantize pipeline smoke test, not a real submission."
+    },
+    "test_prompts": [
+      {
+        "prompt_id": "p1",
+        "prompt": "What was the retail price of maize in Bama, Nigeria in March 2024?"
+      },
+      {
+        "prompt_id": "p2",
+        "prompt": "Did the price of rice in Kampala rise or fall between 2023 and 2024?"
+      }
+    ],
+    "model": {
+      "name": "Qwen3-1.7B-dryrun-qlora",
+      "runtime": "llama.cpp",
+      "quantization": "Q4_K_M",
+      "parameters_estimate": "1.7B",
+      "packaging": "binary_bundle"
+    }
+  },
+  "environment": {
+    "measured_on": "participant_laptop",
+    "cpu_model": "Apple M3 Pro",
+    "ram_gb": 18.0,
+    "gpu": "integrated only",
+    "os": "macOS-15.7.3-arm64-arm-64bit"
+  },
+  "throughput": {
+    "tokens_per_second_generation": 84.07,
+    "first_token_latency_ms": 1725.51,
+    "prompt_tokens": 512,
+    "generated_tokens": 128
+  },
+  "memory": {
+    "peak_rss_mb": 2304.03,
+    "steady_state_rss_mb": 2166.7,
+    "peak_vms_mb": 805562.98
+  },
+  "accuracy": [],
+  "cpu_thermal": {
+    "cpu_percent_p99": 60.2,
+    "core_temp_c_peak": null,
+    "throttled": false
+  },
+  "reproducibility": {
+    "git_commit_sha": "000000000000",
+    "docker_image_digest": "unknown",
+    "random_seed": 42
+  },
+  "model_info": {
+    "params_count": 1720574976,
+    "context_length": 40960,
+    "architecture": "qwen3",
+    "claimed_params_estimate": "1.7B",
+    "params_match": true
+  }
+}

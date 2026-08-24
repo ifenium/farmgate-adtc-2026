@@ -1,0 +1,312 @@
+=== 1_price_lookup_maize_nairobi ===
+PROMPT: Bei ya mahindi ilikuwa ngapi katika soko la Nairobi mwezi wa Januari 2024?
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\| 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Bei ya mahindi ilikuwa ngapi katika soko la Nairobi mwezi wa Januari 2024?
+Mwaka ya Januari 2024, bei ya mahindi ilikuwa ngapi katika soko la Nairobi mwezi wa Januari 2024. Kila soko la Nairobi ilikuwa ngapi kati ya 1,200 USD.
+
+[ Prompt: 159.4 t/s | Generation: 74.5 t/s ]
+
+
+Exiting...
+
+
+=== 2_price_lookup_rice_dar ===
+PROMPT: Mchele uliuzwa kwa bei gani jijini Dar es Salaam mwaka 2023?
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Mchele uliuzwa kwa bei gani jijini Dar es Salaam mwaka 2023?
+I cannot provide specific data on the prices of agricultural products in Dar es Salaam for the year 2023 as I do not have access to real-time or specific market data. For accurate information, you may need to consult agricultural market reports, official agricultural statistics, or local agricultural extension services.
+
+[ Prompt: 171.2 t/s | Generation: 76.2 t/s ]
+
+
+Exiting...
+
+
+=== 3_trend_beans ===
+PROMPT: Je, bei ya maharagwe ilipanda au kushuka kati ya Januari 2023 na Desemba 2024?
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Je, bei ya maharagwe ilipanda au kushuka kati ya Januari 2023 na Desemba 2024?
+I am unable to provide specific data on the prices of maize (maharagwe) or other agricultural products in Kenya for the periods January 2023 to December 2024. For accurate and up-to-date information, I recommend checking official sources such as the Kenya Agricultural and Livestock Research Institute (KALR), the Kenya Bureau of Statistics (KBS), or the Kenya Agricultural and Livestock Extension Service (KALS).
+
+[ Prompt: 178.3 t/s | Generation: 79.2 t/s ]
+
+
+Exiting...
+
+
+=== 4_trend_sugar ===
+PROMPT: Bei ya sukari imebadilikaje kutoka mwaka jana hadi mwaka huu?
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Bei ya sukari imebadilikaje kutoka mwaka jana hadi mwaka huu?
+I am unable to provide specific information about the current agricultural market prices in Kenya or any other country. For accurate and up-to-date information, I recommend checking reliable agricultural market data sources or contacting local agricultural agencies.
+
+[ Prompt: 179.2 t/s | Generation: 82.5 t/s ]
+
+
+Exiting...
+
+
+=== 5_cross_market_rice ===
+PROMPT: Ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kigali?
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\| 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kigali?
+Ili ya chini zaidi ya mchele kati ya Kampala na Kigali kati ya ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kigali kati ya ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kigali kati ya ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kigali kati ya ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kigali kati ya ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kigali kati ya ni soko gani lenye bei ya chini zaidi ya mchele kati ya Kampala na Kig
+
+[ Prompt: 190.8 t/s | Generation: 80.0 t/s ]
+
+
+Exiting...
+
+
+=== 6_abstain_future ===
+PROMPT: Bei ya viazi itakuwa ngapi mwezi wa Machi 2027?
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/ 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Bei ya viazi itakuwa ngapi mwezi wa Machi 2027?
+I am unable to provide specific information about the price of maize in Machi 2027 as it is not available in my database. Please consult a reliable agricultural information source or a local agricultural extension office for the most accurate and up-to-date information.
+
+[ Prompt: 173.7 t/s | Generation: 81.5 t/s ]
+
+
+Exiting...
+
+
+=== 7_abstain_obscure ===
+PROMPT: Ulikuwa na taarifa gani kuhusu bei ya mtama katika soko la Goma, DRC, mwezi Juni 2023?
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\| 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Ulikuwa na taarifa gani kuhusu bei ya mtama katika soko la Goma, DRC, mwezi Juni 2023?
+Mwaka 2023, kwa mazinguma kati ya Juni, kila soko la Goma, DRC, kila matokeo ya mtama kuhusu bei ya mtama kufanya kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka kifaka k
+
+[ Prompt: 182.7 t/s | Generation: 78.4 t/s ]
+
+
+Exiting...
+
+
+=== 8_open_fluency ===
+PROMPT: Eleza kwa ufupi kwa nini bei za vyakula barani Afrika hubadilika kulingana na msimu.
+---
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\| 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-60adddd
+model      : /Users/Apple/Documents/hack/models/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+using custom system prompt
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Eleza kwa ufupi kwa nini bei za vyakula barani Afrika hubadilika kulingana na msimu.
+Eleza kwa ufupi kwa nini bei za vyakula barani Afrika hubadilika kulingana na msimu kila kwa kwa kila kwa kila kwa kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila kila
+
+[ Prompt: 159.0 t/s | Generation: 69.1 t/s ]
+
+
+Exiting...
+
+

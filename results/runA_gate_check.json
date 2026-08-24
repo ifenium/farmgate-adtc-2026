@@ -1,0 +1,352 @@
+[
+  {
+    "prompt": "What was the retail price of Eggs (medium size) in Cairo (national average), Egypt in December 2024?",
+    "gold": "5.78 EGP per 1 piece",
+    "response": "Data unavailable: WFP VAM has no retail price for Eggs (medium size) in Cairo (national average) for December 2024.",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Yam in Bembèrèkè, Benin in June 2023?",
+    "gold": "180.00 XOF per KG",
+    "response": "I don't have a retail price for Yam in Bembèrèkè in June 2023.",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Pencil in Adjumani (refugee settlement), Uganda in September 2023?",
+    "gold": "200.00 UGX per Unit",
+    "response": "500.00 UGX per Unit",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Fuel (kerosene) in Tadjourah, Djibouti in January 2024?",
+    "gold": "150.00 DJF per L",
+    "response": "180.00 DJF per L",
+    "correct": false,
+    "reason": "near_miss"
+  },
+  {
+    "prompt": "What was the retail price of Yogurt in Kerewan, Gambia in August 2023?",
+    "gold": "35.00 GMD per 125 G",
+    "response": "100.00 GMD per 200 ML",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Plantains in Masisi Centre, Democratic Republic of the Congo in October 2023?",
+    "gold": "1000.00 CDF per KG",
+    "response": "1000.00 CDF per KG",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "prompt": "What was the retail price of Maize meal in Mahusekwa, Zimbabwe in August 2024?",
+    "gold": "0.65 USD per KG",
+    "response": "1500.00 ZWL per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Plantains in Sékou, Benin in November 2024?",
+    "gold": "385.50 XOF per KG",
+    "response": "185.00 XOF per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Oranges in Tchaourou, Benin in April 2024?",
+    "gold": "143.00 XOF per KG",
+    "response": "952.38 XOF per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Livestock (Goat) in Burtinle, Somalia in February 2024?",
+    "gold": "2706480.00 SOS per Head",
+    "response": "35000.00 SOS per Head",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Rice (low quality, local) in Bukirasazi, Burundi in March 2023?",
+    "gold": "3129.41 BIF per KG",
+    "response": "1800.00 BIF per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Rice (milled, local) in Bassila, Benin in November 2024?",
+    "gold": "496.00 XOF per KG",
+    "response": "450.00 XOF per KG",
+    "correct": false,
+    "reason": "near_miss"
+  },
+  {
+    "prompt": "What was the retail price of Bananas in Kalulushi Main, Zambia in February 2024?",
+    "gold": "5.00 ZMW per KG",
+    "response": "25.00 ZMW per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Potatoes (Irish) in Kakuma 4, Kenya in November 2023?",
+    "gold": "67.50 KES per KG",
+    "response": "180.00 KES per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Fuel (diesel) in Pitche, Guinea-Bissau in March 2023?",
+    "gold": "854.00 XOF per L",
+    "response": "1500.00 XOF per L",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Potatoes in Dassa-Zoumè, Benin in June 2023?",
+    "gold": "1800.00 XOF per KG",
+    "response": "150.00 XOF per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Oil in Awserd, Algeria in February 2023?",
+    "gold": "1000.00 DZD per 5 L",
+    "response": "105.90 DZD per L",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Cassava (fresh) in Lobule (refugee settlement), Uganda in October 2024?",
+    "gold": "720.00 UGX per KG",
+    "response": "1000.00 UGX per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Fuel (diesel) in Kayongozi, Burundi in July 2023?",
+    "gold": "5250.00 BIF per L",
+    "response": "1800.00 BIF per L",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Cassava in Kabeza, Rwanda in February 2024?",
+    "gold": "300.00 RWF per KG",
+    "response": "Data unavailable: WFP VAM has no retail price for Cassava in Kabeza for February 2024.",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Bananas in Abba Gamaram, Nigeria in February 2023?",
+    "gold": "450.00 NGN per 1.3 KG",
+    "response": "I don't have a retail price for Bananas in Abba Gamaram in February 2023.",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Wheat flour in Eddein, Sudan in August 2024?",
+    "gold": "5000.00 SDG per KG",
+    "response": "1800.00 SDG per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Groundnuts (shelled) in Bambari, Central African Republic in September 2023?",
+    "gold": "606.00 XAF per KG",
+    "response": "I don't have a retail price for Groundnuts (shelled) in Bambari in September 2023.",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Mangoes in Ndugu Kebbeh, Gambia in October 2024?",
+    "gold": "21.07 GMD per KG",
+    "response": "Data unavailable: WFP VAM has no retail price for Mangoes in Ndugu Kebbeh for October 2024.",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Tomatoes in Yoko, Benin in April 2024?",
+    "gold": "315.00 XOF per KG",
+    "response": "504.35 XOF per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Cassava (cossette) in Butembo, Democratic Republic of the Congo in September 2023, in US dollars?",
+    "gold": "0.44 USD per KG",
+    "response": "0.97 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Beans (niebe) in Yorosso, Mali in June 2023, in US dollars?",
+    "gold": "0.68 USD per KG",
+    "response": "1.49 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Fish (dry) in Bambadinca, Guinea-Bissau in September 2024, in US dollars?",
+    "gold": "6.05 USD per KG",
+    "response": "1.45 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Fish (dry) in Bubaque, Guinea-Bissau in June 2024, in US dollars?",
+    "gold": "6.06 USD per KG",
+    "response": "1.45 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Bananas in Sekota, Ethiopia in March 2023, in US dollars?",
+    "gold": "0.96 USD per KG",
+    "response": "0.89 USD per KG",
+    "correct": false,
+    "reason": "near_miss"
+  },
+  {
+    "prompt": "What was the retail price of Yam in Damboa, Nigeria in May 2024, in US dollars?",
+    "gold": "1.19 USD per 2.5 KG",
+    "response": "0.30 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Rice (imported) in Harobanda, Niger in June 2023, in US dollars?",
+    "gold": "0.80 USD per KG",
+    "response": "0.49 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Rice (local) in Kailahun, Sierra Leone in February 2024, in US dollars?",
+    "gold": "0.79 USD per KG",
+    "response": "0.81 USD per KG",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "prompt": "What was the retail price of Beans (red) in Geidam, Nigeria in April 2024, in US dollars?",
+    "gold": "3.04 USD per 2.5 KG",
+    "response": "0.49 USD per 2.5 KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Plantains in Bertoua 2, Cameroon in March 2023, in US dollars?",
+    "gold": "0.54 USD per KG",
+    "response": "1.29 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Milk (powder) in Twil, Mauritania in July 2024, in US dollars?",
+    "gold": "4.19 USD per KG",
+    "response": "10.59 USD per 400 G",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Livestock (cattle) in Diallassagou, Mali in May 2024, in US dollars?",
+    "gold": "464.26 USD per Head",
+    "response": "105.95 USD per Head",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Fish (dry) in Bere, Chad in March 2024, in US dollars?",
+    "gold": "4.62 USD per KG",
+    "response": "1.49 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Rice (local) in Temera, Mali in June 2023, in US dollars?",
+    "gold": "0.96 USD per KG",
+    "response": "0.72 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Cassava flour in Gasenyi, Burundi in April 2023, in US dollars?",
+    "gold": "0.98 USD per KG",
+    "response": "0.82 USD per KG",
+    "correct": false,
+    "reason": "near_miss"
+  },
+  {
+    "prompt": "What was the retail price of Oil (cotton) in Mayo galke, Cameroon in November 2024, in US dollars?",
+    "gold": "2.42 USD per L",
+    "response": "2.45 USD per L",
+    "correct": true,
+    "reason": "correct"
+  },
+  {
+    "prompt": "What was the retail price of Sweet potatoes in Ruyigi, Burundi in May 2024, in US dollars?",
+    "gold": "0.50 USD per KG",
+    "response": "1.29 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Oil (groundnut) in Zè, Benin in February 2023, in US dollars?",
+    "gold": "1.81 USD per L",
+    "response": "1.59 USD per L",
+    "correct": false,
+    "reason": "near_miss"
+  },
+  {
+    "prompt": "What was the retail price of Rice (Broken, local) in Kalalé, Benin in December 2024, in US dollars?",
+    "gold": "0.57 USD per KG",
+    "response": "1.05 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Groundnuts (Bambara) in Hozin, Benin in September 2024, in US dollars?",
+    "gold": "1.84 USD per KG",
+    "response": "1.59 USD per KG",
+    "correct": false,
+    "reason": "near_miss"
+  },
+  {
+    "prompt": "What was the retail price of Oil (vegetable, local) in Mocuba, Mozambique in June 2023, in US dollars?",
+    "gold": "3.00 USD per L",
+    "response": "1.56 USD per L",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Livestock (cattle) in Diafarabé, Mali in April 2024, in US dollars?",
+    "gold": "226.89 USD per Head",
+    "response": "1058.00 USD per Head",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Salt in Buta, Democratic Republic of the Congo in September 2023, in US dollars?",
+    "gold": "0.82 USD per KG",
+    "response": "0.99 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Okra (fresh) in Ngaoui, Cameroon in June 2023, in US dollars?",
+    "gold": "2.50 USD per KG",
+    "response": "0.39 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  },
+  {
+    "prompt": "What was the retail price of Rice (imported) in Massenya, Chad in December 2023, in US dollars?",
+    "gold": "0.75 USD per KG",
+    "response": "0.99 USD per KG",
+    "correct": false,
+    "reason": "wrong_value"
+  }
+]
