@@ -1,6 +1,5 @@
 {
   "team_id": "ferrarri",
-  "git_commit_sha": "49ea9966a1c3099ef5a8eac9e918beed1ed407de",
   "domain": "agriculture",
   "language_scope": [
     "en"
@@ -35,6 +34,7 @@
     "packaging": "binary_bundle"
   },
   "_runtime": {
-    "model_path": "model/Qwen3-1.7B-agri-final-Q4_K_M.gguf"
+    "model_path": "model/Qwen3-1.7B-agri-final-Q4_K_M.gguf",
+    "git_commit_sha": "ac7836dc38aeb072c2656a39beb5c78ff531d768"
   }
 }
