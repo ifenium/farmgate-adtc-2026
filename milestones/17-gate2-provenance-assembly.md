@@ -117,6 +117,19 @@ commit's own hash — a file cannot self-referentially contain the hash of the c
 introduces it, so the standard two-commit pattern is used here (see the git log for the exact
 pair).
 
+**Correction, caught by actually running the reference tool rather than assuming compliance**:
+the first attempt placed `git_commit_sha` as a **top-level** field, which fails the reference
+`adtc-profiler`'s own schema validation outright (`additionalProperties: false` on the submission
+block, confirmed against both the locally installed package and the live upstream repo — no
+newer schema exists there as of this session). Fixed in a second follow-up commit by nesting it
+inside `_runtime` instead — the one object the profiler's own code explicitly strips before
+schema validation (`cli.py`'s own comment: *"Schema is strict (additionalProperties: false).
+Strip the operational `_runtime` block..."*). Re-ran `adtc-profiler run` end to end against the
+corrected file to confirm it now completes cleanly, and that its own independently-computed
+`reproducibility.git_commit_sha` (via `git rev-parse` in the checkout) matches the value stored
+in `_runtime`. The field is necessarily one commit "behind" `HEAD` by construction (it cannot
+reference the commit that writes it) — accepted as expected, not chased with further commits.
+
 ## Open risks / dependencies carried forward
 
 - The six pre-existing project scripts (`generate_sft_dataset.py`, `format_sft_chat.py`,
