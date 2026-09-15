@@ -19,7 +19,7 @@
   "test_prompts": [
     {
       "prompt_id": "tp_001",
-      "prompt": "Rank Am Timan, Melfi, Zouar, Bardai in Chad by retail price of Maize (white) in January 2024, from lowest to highest."
+      "prompt": "What was the retail price of Millet in Bama, Nigeria in February 2025?"
     },
     {
       "prompt_id": "tp_002",

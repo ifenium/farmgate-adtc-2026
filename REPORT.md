@@ -6,7 +6,7 @@
 
 ---
 
-**Executive summary.** An offline Qwen3 1.7B assistant for African agricultural market prices (WFP VAM data through December 2024), QLoRA fine-tuned and quantized to GGUF Q4_K_M (1.03 GB), running entirely on-device with zero cloud dependency. The central engineering result: a diagnosed contradiction between two training families sharing an identical prompt shape was driving confident price fabrication; relabeling one family to a calibrated hedge fixed both at once — `state_at_time` 0%→100%, `gap_within_range` 0%→100% with zero changes to its own training data — raising held-out test accuracy from 37.3% to 69.3%. Measured on development hardware, on the exact file this repo ships: 82.6 tok/s generation, ~2.3 GB peak RSS, comfortably under the 7 GB ceiling. A second, separately-discovered risk was found and fixed before shipping: generic runtimes that don't explicitly set a context size default to this model's full native 40,960-token context, pushing real-use memory to 3.4–4.2 GB — capped via a metadata-only patch, verified not to affect accuracy or weights (§4.6). One capability is named as unresolved rather than hidden: `trend_change`/`yoy_comparison` price-direction reasoning, where the model still collapses to a single canned answer regardless of the actual facts (§4.4).
+**Executive summary.** An offline Qwen3 1.7B assistant for African agricultural market prices (WFP VAM data through December 2024), QLoRA fine-tuned and quantized to GGUF Q4_K_M (1.03 GB), running entirely on-device with zero cloud dependency. The central engineering result: a diagnosed contradiction between two training families sharing an identical prompt shape was driving confident price fabrication; relabeling one family to a calibrated hedge fixed both at once — `state_at_time` 0%→100%, `gap_within_range` 0%→100% with zero changes to its own training data. Round 1 judging surfaced two further, independently investigated findings, both fixed before this resubmission: the shipped model is **system-prompt-brittle** — it only performs at its trained level when given the exact system prompt it trained under, which caused the submitted `full_rank` showcase prompt to be refused under the actual judge condition despite scoring well in this project's own evaluation harness — fixed by shipping the verbatim training system prompt as the GGUF's own default (§4.7); and `cross_market_ranking`'s apparent skill was found to be substantially a data-generation artifact (the generator lists candidate markets in price order, so "rank lowest to highest" is partly answerable by echoing the prompt) — disclosed in full, with the showcase prompt replaced (§4.8, §6). Measured on development hardware across three fresh, git-checkout-verified profiler runs on the exact shipping file: median 83.86 tok/s generation, 2,298.92 MB peak RSS — see §5 for the full range and an explicit caveat on how this is expected to differ on x86-64 target hardware. Accuracy is now reported under the condition judges actually use (no caller-supplied system message, one fresh generation per example) rather than the project's original persistent-instance harness, which was found to be order-dependent (§4.7): **108/150 (72.0%)** on the held-out test set. One capability remains named as unresolved rather than hidden: `trend_change`/`yoy_comparison` price-direction reasoning, where the model still collapses to a single canned answer regardless of the actual facts (§4.4). Full model provenance — base model revision, training logs, adapter weights, checksums, and a before/after comparison against the unmodified base model — is in `provenance/` and summarized in §8.
 
 ---
 
@@ -37,7 +37,9 @@ Four candidates were bake-off tested on identical CPU-only hardware before commi
 
 ### 2.2 Domain and dataset methodology
 
-Agriculture was chosen over Healthcare (malaria/maternal health) on a data-availability scan, not a topic preference. WFP VAM's Global Food Prices dataset was confirmed — by actually downloading and parsing it, not reading documentation — to provide 223,549 African price observations across 39 countries and 1,922 markets in 2024 alone, under a clean `cc-by-igo` license with no non-commercial restriction. Healthcare's best-structured source (WHO/IMCI protocol documents) was confirmed CC BY-NC-SA 3.0 IGO — a direct conflict with this challenge's commercialization-residency prize track.
+Agriculture was chosen over Healthcare (malaria/maternal health) on a data-availability scan, not a topic preference. [WFP VAM's Global Food Prices dataset](https://data.humdata.org/dataset/global-wfp-food-prices) was confirmed — by actually downloading and parsing it, not reading documentation — to provide 223,549 African price observations across 39 countries and 1,922 markets in 2024 alone, under a clean **CC BY 3.0 IGO** license (`cc-by-igo`) with no non-commercial restriction. *Price data sourced from the World Food Programme (WFP) Vulnerability Analysis and Mapping (VAM) unit's Global Food Prices dataset, licensed CC BY 3.0 IGO. No endorsement by WFP is implied.* Healthcare's best-structured source (WHO/IMCI protocol documents) was confirmed CC BY-NC-SA 3.0 IGO — a direct conflict with this challenge's commercialization-residency prize track.
+
+The methodological approach — gold labels computed by verifiable arithmetic rather than LLM-judged distillation — is adapted from [`africatic/afritemp-bench`](https://huggingface.co/datasets/africatic/afritemp-bench) (12,568 examples of temporal reasoning over African economic indicators, same verifiable-arithmetic-labels approach) as a methodology template; no data or code from that dataset is reused. See `provenance/DATASET_LICENSE.md` for the full citation and license trail.
 
 The core methodological bet: **gold labels for the fine-tuning set are computed by verifiable arithmetic over structured data, not LLM-judged or hand-written.** Five generator families were built against the cleaned WFP corpus (Retail pricetype, deduplicated, null/zero prices dropped):
 
@@ -135,37 +137,83 @@ Measured directly: loading the model via `llama-server` with no `-c` flag pushed
 
 **Fix, verified before adopting**: patched the GGUF's `context_length` metadata field down from 40,960 to 4,096 (`gguf_set_metadata.py`, metadata-only, tensor data untouched by construction) — a context window this project's own domain (short factual Q&A, terse responses) never needs more than a small fraction of. Confirmed the default-loading behavior actually responds to this: `llama-server` with no `-c` flag now allocates `n_ctx_slot = 4096` instead of 40960, and real-use peak RSS dropped to ~2.6 GB, back in line with the rest of this report's numbers. Re-ran the full 150-example evaluation against the patched file: identical 104/150, identical per-family breakdown — confirms the metadata-only patch changed nothing about model behavior or weights, only the default context allocation a generic runtime falls back to.
 
+### 4.7 System-prompt brittleness and the corrected accuracy figure
+
+Round 1's judge scorecard showed the submitted `tp_001` (`full_rank`, chosen specifically for scoring 6/6 in this project's own evaluation) being **refused** by the shipped model: *"I don't have the exact retail price data... I can't reliably recall individual historical price figures."* Two causes were found, both by testing the actual judge condition (no caller-supplied system message) rather than trusting the project's own eval harness.
+
+**Cause 1 — the eval harness never exercised its own default-system-prompt patch.** §4.5's fix fires only when the caller supplies no system message; `scripts/evaluate_test_set.py` always supplies one. Measuring the shipped model under both conditions on the full `cross_market_ranking` test set:
+
+| condition | `full_rank` | `lowest` | `highest` | total |
+|---|---|---|---|---|
+| eval harness's training system prompt | 6/6 | 7/7 | 3/6 | 16/19 |
+| no system message (the judge condition) | 4/6 | 6/7 | 1/6 | 11/19 |
+
+Under the judge condition, `tp_001` is refused — reproducing the Round 1 scorecard exactly.
+
+**Cause 2 — the model is system-prompt-brittle.** Milestone 04 burned one fixed system prompt into every training example. Swept six reworded default-system-prompt candidates (from a "capability-first" framing to dropping the default entirely) against the shipped weights; **none** recovered the eval-condition's ranking accuracy — all landed at 10–12/19, close to the no-default condition, regardless of wording. Setting the default to the **verbatim training system prompt** instead reproduced the eval condition's numbers exactly (16/19, full recovery). The model only performs at its trained level under the exact string it trained under, not a paraphrase of it — even appending one extra sentence to the verbatim string cost 2 of 19 answers in a follow-up test.
+
+**Fix adopted**: the shipped GGUF's default system message (§4.5's mechanism — fires only when the caller supplies none) is now the verbatim training system prompt, not a rewritten disclaimer. Metadata-only patch; all 310 tensors verified byte-identical to the pre-patch file; the §4.6 context-length cap and the thinking-mode-off mechanism (§2, `milestones/04`) are unaffected.
+
+**A third, independent bug was found while measuring this**: `llama_cpp.Llama` at `temperature=0.0` is not stateless across calls in the same process. `evaluate_test_set.py` runs all 150 examples through one persistent instance; `tp_001`'s response was found to flip from refusal to a correct ranking after several prior generations in the same instance, and `llm.reset()` restores the refusal. **Every accuracy figure in this project's history was measured on a persistent instance and is order-dependent** — a genuine reproducibility gap independent of the system-prompt finding.
+
+**Corrected full evaluation** — judge condition (no system message), `llm.reset()` before every generation, on the shipped artifact:
+
+| family | pre-fix | shipped (this fix) |
+|---|---|---|
+| `state_at_time` | 50/50 | 50/50 |
+| `abstention_negative` | 26/26 | 26/26 |
+| `cross_market_ranking` | 11/19 (58%) | **16/19 (84%)** |
+| `trend_change` | 16/30 | 9/30 |
+| `yoy_comparison` | 7/25 | 7/25 |
+| **aggregate** | 110/150 | **108/150 (72.0%)** |
+
+`state_at_time` and `abstention_negative` hold at 100%. The aggregate moving 110→108 is not a regression: the pre-fix model answers "rose" on all 30 `trend_change` prompts under the judge condition (a single canned direction, scoring 16/30 only because 16 of 30 truths happen to be "rise"); the fix spreads guesses across fell/flat/rose but is equally uninformed by the actual facts — neither figure reflects real trend capability (§4.4).
+
+**The 108/150 figure supersedes the 69.3% figure in §4.3** as the number that reflects what judges actually measure; §4.3's table is kept as the honest historical record of the Run 1 → Run B relative comparison (measured consistently within that experiment) rather than rewritten. Full detail: `milestones/15`.
+
+### 4.8 Ranking degeneracy — a data-generation leak, disclosed
+
+While investigating §4.7, `cross_market_ranking`'s own generator was re-examined rather than carried forward as "the one family with real, meaningful signal" (its prior characterization in this report and in `milestones/10`). `scripts/generate_sft_dataset.py` sorts candidate markets by price **before** building the prompt text — the market names in every `cross_market_ranking` prompt are listed in price order. Checked exhaustively across the full dataset (not sampled): gold ascending order equals prompt listing order in **53/53** `full_rank` examples; the correct `lowest` answer is the first-listed market in **54/54** examples; the correct `highest` answer is the last-listed market in **43/53** (81%). "Rank these from lowest to highest" is partly answerable by repeating the question back — including in the original submitted `tp_001`, whose four markets were listed in their actual ascending price order.
+
+Tested the real capability directly by relisting the same test prompts with market order decoupled from price order, gold values unchanged: `full_rank` collapses from 6/6 to **0/6** under both a reversed and an alphabetical relisting. `tp_001` with its markets reversed (gold order unchanged) returns the *relisted* order verbatim, with the same canned price figures regardless of the actual prompt. Across all ranking responses, only 4 of 49 volunteered price figures (8.2%) match any real gold price in the test set; 55% cluster in a 100–170 numeric band irrespective of the commodity, currency, or country asked about.
+
+A latent grading bug was found and fixed in the same pass: `grade_ranking()` had no tie handling for `lowest`/`highest` — when two markets are exactly tied for the target price, only one was accepted as correct. Fixed to accept any market tied for the target value.
+
+This is disclosed here rather than left as an inflated claim, consistent with this project's standing practice of distrusting aggregates and checking its own graders (`milestones/07`, `12`). Full detail, including why `highest`'s historically weaker numbers are now explained (it is the one subtype the leak only partially covers): `milestones/16`.
+
 ---
 
 ## 5. Benchmarks
 
-All measurements: Apple M3 Pro (arm64), CPU-only llama.cpp build (Metal/Accelerate/BLAS confirmed unlinked via `otool -L`), `-ngl 0`. **Not the x86-64 Standard Laptop** — see §3.
+All measurements: Apple M3 Pro (arm64), CPU-only llama.cpp build (Metal/Accelerate/BLAS confirmed unlinked via `otool -L`), `-ngl 0`. **Not the x86-64 Standard Laptop.** These figures are the same quantities organizers will independently measure via the reference profiler, on different hardware — see the caveat below, added specifically to satisfy Gate 2 §3.4 ("a discrepancy predicted in this report is not an unexplained one").
 
-**Day 1 model bake-off** (all four candidates, n_ctx 2048/4096): table in §2.1.
+**Day 1 model bake-off** (all four candidates, prompt-processing at n_ctx 1920 / generation at n_ctx 128, per the profiler's own `llama-bench -p 1920 -n 128` invocation — corrected label; a prior version of this table described these as "n_ctx 2048/4096," which is not what `llama-bench` actually ran): table in §2.1.
 
-**Final artifact** — the exact file this repo ships (`Qwen3-1.7B-agri-final-Q4_K_M.gguf`, Run B QLoRA adapter fused, quantized to Q4_K_M, patched with a default system message (§4.5) and a capped default context window (§4.6), 1.03 GB; both patches re-verified against this exact file, not assumed from earlier pre-patch measurements):
+**Final artifact** — the exact file this repo ships (`Qwen3-1.7B-agri-final-Q4_K_M.gguf`, Run B QLoRA adapter fused, quantized to Q4_K_M, patched with a default system message that is the verbatim training prompt (§4.7, superseding the §4.5 patch) and a capped default context window (§4.6), 1.03 GB). Three fresh profiler runs, `adtc-profiler run --mode participant`, from a real git checkout so `git_commit_sha`/`team_id`/`model.name`/`test_prompts` all resolve correctly against this repo's actual `metadata.json` — full detail: `milestones/18`, raw JSON at `results/gate2_clean_run{1,2,3}.json`:
 
-| Measurement | Value |
-|---|---|
-| Official profiler run — peak RSS | 2,245–2,305 MB (two runs) |
-| Official profiler run — TPS (generation) | 82.6 tok/s clean baseline; see note below |
-| n_ctx 2048 — peak RSS / TG tok/s | 2,445 MB / 85.2 tok/s |
-| n_ctx 4096 — peak RSS / TG tok/s | 2,667 MB / 77.8 tok/s |
-| Real-use peak RSS, default (no `-c`) context, pre-fix | 3.4–4.2 GB (§4.6) |
-| Real-use peak RSS, default context, post-fix | ~2.6 GB (§4.6) |
+| Measurement | Run 1 | Run 2 | Run 3 | Median |
+|---|---|---|---|---|
+| TG tok/s (generation, `n_ctx=128`) | 86.76 | 83.86 | 79.76 | **83.86** |
+| First-token latency (ms, prompt-processing at `n_ctx=512`) | 1696.88 | 1707.11 | 1753.81 | **1707.11** |
+| Peak RSS (MB) | 2285.23 | 2300.05 | 2298.92 | **2298.92** |
+| Steady-state RSS (MB) | 2161.83 | 2216.27 | 2172.09 | **2172.09** |
 
-**TPS note, stated plainly rather than smoothed over**: the 82.6 tok/s baseline was measured cleanly before this session's final patch round. Two re-measurements taken immediately after applying the context-length fix showed 42–46 tok/s — investigated rather than accepted at face value: a background process was consuming ~70% of a CPU core on the development machine at that moment (confirmed via `ps aux`, not this session's own tooling). A controlled comparison — the pre-fix and post-fix files benchmarked back to back under the same contention — showed both drop to the same degraded range together, which is the signature of external system load, not a regression caused by the fix. Peak RSS is unaffected by CPU contention and both post-fix readings (2,245 / 2,305 MB) are consistent with the clean baseline. The 82.6 tok/s figure is carried forward as the best available estimate; re-verifying under quiet conditions before final submission is worth doing if precision matters here.
+The machine was under ordinary interactive load throughout, not fully quiesced — a genuinely idle machine was not available for this measurement. This is disclosed as measured-under-load rather than presented as a controlled clean-room figure. A fourth run with the profiler's `lm_eval`-based accuracy stage enabled (`arc_easy`, 50 samples, informational general-capability check — not FarmGate's own domain accuracy, and not diffed by the profiler's comparator) recorded `acc_norm 0.66`.
 
-Peak RSS sits comfortably under the 7 GB efficiency ceiling in every configuration tested, including the pre-fix default-context worst case (4.2 GB). The full 150-example accuracy evaluation was re-run against this exact shipping file after each patch and reproduced the §4.3 numbers exactly both times (104/150, identical per-family breakdown) — confirming both patches changed metadata only, not model weights or behavior on any prompt that supplies its own system message.
+**Expected divergence on the x86-64 Standard Laptop, stated explicitly rather than left implicit.** The profiler's throughput probe (`llama-bench -p 512 -n 128 -ngl 0`) runs on a different SIMD path there (AVX2, not NEON) with no chat template rendered — the same quantities measured above, on different silicon. We expect the audit environment to land **materially lower on tokens/second and materially higher on first-token latency** than the Apple Silicon figures above, and do not claim these absolute figures will reproduce on target hardware. Peak and steady-state RSS are expected to reproduce within the profiler's own ±15% tolerance; throughput and TTFT are not expected to reproduce within its ±25% tolerance. Our own estimate for the audit environment, per `HANDOVER.md`'s size-class analysis, is **15–25 tok/s generation**.
+
+**Real-use peak RSS under a generic runtime's default context allocation** (§4.6): 3.4–4.2 GB pre-fix (context 40,960), ~2.6 GB post-fix (context 4,096) — findings from diagnosis, not captured as profiler artifacts (measured via `llama-server`, a binary not on this machine's `PATH` during the profiler runs above); kept as the engineering finding, not restated as a measurement of record. Peak RSS sits comfortably under the 7 GB efficiency ceiling in every configuration measured, including this pre-fix worst case.
+
+**What was corrected from a prior version of this section, and why.** This report previously cited "82.6 tok/s... on the exact file this repo ships" in its executive summary. That figure was measured on an *earlier* artifact — `milestones/13`'s pre-context-patch file, sha256 `b7ae731d…5931e`, not the shipped file's `9c2241…`/`6508b7…` — traced by checking which of five `results/*submission*.json` files the 82.6 figure and the RSS figures each actually came from (they were two different files). The five stale profiler JSONs are archived at `results/archive_stale_prerelease/` rather than left in `results/` where they could be mistaken for current. Full trace: `milestones/18`.
 
 ---
 
 ## 6. Test prompts submitted
 
-1. *"Rank Am Timan, Melfi, Zouar, Bardai in Chad by retail price of Maize (white) in January 2024, from lowest to highest."* — demonstrates verified ranking-order accuracy (`cross_market_ranking`/`full_rank`, 100% on this exact subtype in evaluation). **Caveat, confirmed by direct testing, not theoretical:** `full_rank` grading checks only the order in which markets are named against the gold ordering — it does not verify the specific price figures the model states alongside them. A live generation for this exact prompt returned the correct order with fabricated prices (invented values, not the real 246.91/290.00/652.00/870.00 XAF). The ordering capability is real; any specific numbers volunteered alongside it are not verified and should not be read as such.
-2. *"What was the retail price of Rice (imported) in Kisumu, Kenya in September 2024?"* — demonstrates the calibrated-honesty behavior that is this submission's central engineering finding (§4.3).
+1. *"What was the retail price of Millet in Bama, Nigeria in February 2025?"* — demonstrates verified cutoff-awareness (`abstention_negative`/`beyond_cutoff`, 100% across every measurement this project has made, including the corrected judge-condition evaluation in §4.7). Bama, Nigeria has real Millet price history for 9 of 12 months through December 2024 in the WFP corpus, so this is a genuine in-range-coverage market, not an obscure combination chosen to make abstention easy. **Replaces the original Round 1 submission's `tp_001`** (a `cross_market_ranking`/`full_rank` prompt), which Round 1 judging revealed to be refused under the exact evaluation condition judges use, and which §4.8 found relies substantially on a data-generation artifact (market names listed in price order) rather than genuine price comparison — see §4.7, §4.8, and `milestones/16` for the full disclosure and the reasoning behind this replacement.
+2. *"What was the retail price of Rice (imported) in Kisumu, Kenya in September 2024?"* — demonstrates the calibrated-honesty behavior that is this submission's central engineering finding (§4.3), unaffected by either finding in §4.7/§4.8.
 
-Both are confirmed absent from all 1,200 training/validation/test examples — genuine generalization tests, not restated evaluation items.
+Both are confirmed absent from all 1,200 training/validation/test examples — genuine generalization tests, not restated evaluation items. The two together exercise two distinct, independently-verified capabilities (cutoff-awareness and calibrated price-recall honesty) rather than two examples of the same behavior.
 
 ---
 
@@ -175,6 +223,57 @@ Both are confirmed absent from all 1,200 training/validation/test examples — g
 - **African-language bonus was evaluated and declined.** Swahili was the leading candidate on base-model support, Latin script, and WFP coverage depth. Direct testing of the un-finetuned base model against 8 domain-shaped Swahili prompts (twice, to rule out a decoding-settings confound) found language collapse to English on half the prompts, genuine coherence breakdown surviving a repetition penalty on 2–3 of 8, and confident fabrication when Swahili was attempted at all. Fine-tuning surfaces existing capability; it does not teach a language — the capability being surfaced here was assessed as too weak to bet a fine-tune on, given the remaining timeline.
 - **RAG/retrieval was assessed and rejected for this submission**, not because it lacks technical merit, but because the evaluation architecture (§3) provides no mechanism for retrieved context to enter the evaluation-time prompt at all — not as a live application (no infrastructure to run one) and not as a training-time expectation (nothing would populate it at evaluation time either).
 - **`trend_change`/`yoy_comparison` remain a real, acknowledged weakness** (§4.4) — the only residual exposure is if a hidden judge prompt lands in this family.
-- **`cross_market_ranking` grading verifies order, not stated prices** (§6) — a live test of the exact submitted `full_rank` prompt returned the correct order with fabricated numbers attached. The ranking capability is real; volunteered specific figures alongside it are not independently verified.
+- **`cross_market_ranking`'s accuracy figures substantially reflect a data-generation artifact, disclosed in full** (§4.8) — the generator lists candidate markets in price order, so much of the family's apparent skill is order-echo rather than price comparison; `full_rank` collapses to 0/6 when listing order is decoupled from price order. The showcase prompt built on this family (`tp_001`) has been replaced (§6).
+- **System-prompt brittleness — identified and fixed (§4.7), not left open.** The shipped model only performs at its trained level under the exact system prompt it trained on; a rewritten disclaimer (the original §4.5 mitigation) cost real accuracy under the judge's actual evaluation condition (no caller-supplied system message). Fixed by shipping the verbatim training prompt as the GGUF's own default. A second, independent finding from the same investigation: the project's evaluation harness runs all 150 test examples through one persistent model instance, which is not stateless at `temperature=0` — every accuracy figure prior to this fix is order-dependent. The corrected, judge-condition figure (108/150, §4.7) supersedes the harness-measured 104/150 (§4.3) as the number that reflects what judges actually measure.
 - **Default-context KV cache sizing — identified and mitigated (§4.6), not left open.** Generic runtimes that don't explicitly set a context size allocate KV cache for this model's full native 40,960-token context by default, pushing real-use peak RSS to 3.4–4.2 GB rather than the ~2.25 GB this report otherwise measures. Fixed by capping the GGUF's declared context length to 4,096 — verified to change the actual default-loading behavior, re-verified to leave accuracy and weights untouched. Surfaced by cross-platform testing on a Windows machine, where the unpatched model failed to load with a KV-cache allocation error under this exact default-context condition.
 - **Self-knowledge bleed-through** (§4.5) — narrow-domain fine-tuning measurably degraded the accuracy of unrelated general-knowledge claims made about the model's own operating context (geography), worth documenting honestly rather than omitting.
+- **Benchmark figures previously misattributed to the shipped file — identified and corrected (§5), not left open.** A prior version of this report cited a throughput figure measured on a different (pre-context-patch) artifact as if it were the shipped file's own number. Corrected to three fresh runs against the actual shipping file, with an explicit disclosed range for how these figures are expected to diverge on x86-64 target hardware. Full trace: `milestones/18`.
+- **Per-step training logs are partially, not fully, recovered** (§8, `provenance/README.md`) — no `.log` file survived from any training run; validation-loss curves were recovered complete for all three real runs from session-transcript history, but train-loss telemetry (reported more densely) is only partially recovered. Disclosed rather than padded.
+
+---
+
+## 8. Model Provenance
+
+**Base model.** [`Qwen/Qwen3-1.7B`](https://huggingface.co/Qwen/Qwen3-1.7B), revision
+`70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`, Apache 2.0. Not pinned by `--revision` in the
+original training run (an untracked gap, closed going forward — see `provenance/README.md`);
+recovered retrospectively from the local cache's `refs/main` state as of 2026-08-19.
+
+**Fine-tuning method.** QLoRA via MLX-LM: base model quantized to 4-bit for training-memory
+efficiency, LoRA rank 8 (scale 20.0, dropout 0.0) on 16 of 28 transformer layers, AdamW,
+batch size 4, 1200 iterations, learning rate 1e-5, seed 42 (Run B — the shipped run; see §4.1–4.3
+for the two earlier runs this project ran and rejected/superseded). Full config:
+`provenance/adapter/adapter_config.json`. Adapter fused into the base model and dequantized
+(`mlx_lm fuse --dequantize`), converted to GGUF (`convert_hf_to_gguf.py`), quantized to Q4_K_M
+(`llama-quantize`), then patched twice — a default chat-template system message (§4.7) and a
+capped context-length metadata field (§4.6), both metadata-only, weights unmodified by
+construction. Full runnable chain: `provenance/merge_and_quantize.sh`.
+
+**Training data.** `dataset_runB/train.jsonl` (900 examples, Run B's relabeled set — see §4.3),
+oversampled to 1,066 rows (`dataset/sft_runB/train.jsonl`, `scripts/generate_sft_runB.py`) and
+chat-formatted with thinking mode structurally disabled. Source: WFP VAM Global Food Prices,
+CC BY 3.0 IGO — full citation, attribution statement, and methodology citation in
+`provenance/DATASET_LICENSE.md` (also §2.2). Gold labels computed by arithmetic over the raw CSVs
+(`data/wfp_2023.csv`, `data/wfp_2024.csv`, both committed to this repo), never hand-written or
+LLM-generated (`scripts/generate_sft_dataset.py`).
+
+**Before/after comparison vs. the unmodified base model**, on the two submitted test prompts plus
+a general self-description question, both models run through their own embedded chat template
+with no caller-supplied system message (the judge condition, §4.7): full transcripts and analysis
+at `provenance/before_after/base_vs_finetuned.md`. Summary: the base model has no concept of the
+specific markets/commodities in either test prompt, states an inconsistent knowledge cutoff, and
+self-describes as a generic Alibaba Cloud assistant; the fine-tune answers in the trained format,
+states a calibrated domain-specific capability boundary rather than a generic excuse, and
+self-describes entirely in terms of the trained domain — an unambiguous behavioral divergence
+from the unmodified base.
+
+**Checksums** (base model, adapter, final GGUF, and the milestone-14 fallback artifact):
+`provenance/CHECKSUMS.txt`. Shipping GGUF sha256:
+`6508b72361a7f57915e458aa92f8a6a90ba4cace778e3c88361fb3b3749baf4c`.
+
+**Full provenance package**: `provenance/` — adapter weights (all 7 checkpoints), recovered
+per-step training logs (validation-loss curves complete for all three real training runs; train-loss
+telemetry partially recovered — see `provenance/README.md` for exactly what survived and how),
+the merge/quantize/patch chain as a runnable script, and the dataset license/citation trail. What
+was recoverable vs. what genuinely isn't is stated plainly there rather than smoothed over —
+see `milestones/17` for the full assembly record.

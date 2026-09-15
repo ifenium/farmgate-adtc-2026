@@ -1,6 +1,12 @@
 # 10 — Submitted Test Prompts Locked
 
-**Status:** Done (2026-08-19), **revised 2026-08-19 after Run B** (milestone 12) made `state_at_time` a proven, distinctive capability rather than a 0%-accuracy family to avoid.
+**Status:** Done (2026-08-19), **revised 2026-08-19 after Run B** (milestone 12) made `state_at_time` a proven, distinctive capability rather than a 0%-accuracy family to avoid. **Superseded 2026-09-15 — see `milestones/16`.**
+
+## Correction (2026-09-15)
+
+This milestone's central claim about `tp_001` — that `full_rank` is "hardest to hit by luck since it requires an exact 4-way order" (§"Options considered" below) — **does not hold up**. `milestones/16` found that `scripts/generate_sft_dataset.py` lists candidate markets in price order before building the prompt text, so `full_rank`'s gold order equals the prompt's own listing order in 53 of 53 dataset examples, including `tp_001` itself (Am Timan/Melfi/Zouar/Bardai are listed in their actual ascending price order). Direct testing confirmed the mechanism: `full_rank` collapses from 6/6 to 0/6 when market listing order is decoupled from price order. Round 1 judging separately found `tp_001` **refused outright** under the actual evaluation condition (no caller-supplied system message) — a second, independent finding, diagnosed in `milestones/15`.
+
+`tp_001` has been replaced with the `beyond_cutoff` prompt this milestone's own §"What was verified" (below) had already scoped and set aside — see the "Correction" note at that section and `milestones/16` for the full replacement decision. The rest of this milestone (the reasoning for `tp_002`, the rejected pairings) is left as the historical record and is not otherwise affected.
 
 ## Decision (current)
 
@@ -36,7 +42,7 @@ Drawn from the two families milestone 07 actually proved out (`full_rank`: 6/6, 
 - Both prompts are **genuinely fresh** — checked against `dataset/all.jsonl` (every train/val/test example, 1,200 total): zero exact-prompt matches. `tp_001` uses the Am Timan market, absent from the dataset entirely. `tp_002` (revised) uses the Kisumu market, also absent entirely.
 - **tp_001** (unchanged): Chad, Maize (white), January 2024 — Am Timan 246.91, Melfi 290.00, Zouar 652.00, Bardai 870.00 XAF per KG. Clean spread (3.5×), no ties, matches the exact `full_rank` prompt template used in training.
 - **tp_002** (revised): Rice (imported), Kisumu, Kenya, September 2024 — genuinely fresh, not grounded in a specific verified row since the target behavior (calibrated hedge) no longer depends on whether the fact exists in the corpus; any `state_at_time`-shaped question triggers the same trained response.
-- ~~The original `beyond_cutoff` grounding note (Bama/Nigeria/Millet)~~ — no longer the submitted prompt, kept here for history: 15 months of real Millet price history (June 2023 – December 2024, NGN per 2.6 KG), asking about February 2025 tested genuine cutoff-generalization. Still a valid, available prompt if the pairing is reverted.
+- ~~The original `beyond_cutoff` grounding note (Bama/Nigeria/Millet)~~ — no longer the submitted prompt, kept here for history: 15 months of real Millet price history (June 2023 – December 2024, NGN per 2.6 KG), asking about February 2025 tested genuine cutoff-generalization. Still a valid, available prompt if the pairing is reverted. **Correction (2026-09-15): it was.** This is now the submitted `tp_001` — see `milestones/16`.
 
 ## Open risks / dependencies carried forward
 

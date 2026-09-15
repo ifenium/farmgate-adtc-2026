@@ -1,0 +1,12 @@
+{
+  "base": {
+    "tp_001": "I do not have access to real-time or specific retail price data for products like Millet in Bama, Nigeria, in February 2025. Prices can fluctuate based on factors such as supply chain issues, government policies, local market conditions, and seasonal demand.\n\nFor the most accurate and up-to-date information, I recommend checking:\n\n1. **Local supermarkets** or **marketplaces** in Bama.\n2. **Online retailers** like **Amazon**, **Ebay**, or **Walmart** (if available in Nigeria).\n3. **Government websites** or **agricultural organizations** that track food prices.\n4. **Mobile apps** that provide real-time price tracking, such as **PriceCheck** or **Maktaba**.\n\nIf you need help finding these resources, I can guide you further!",
+    "tp_002": "As of my knowledge cutoff in October 2024, I cannot provide the exact retail price of rice imported into Kisumu, Kenya, in September 2024. Prices can fluctuate based on factors like import costs, exchange rates, supply and demand, and government policies.\n\nFor the most accurate and up-to-date information, you might want to check:\n\n1. **Local supermarkets** (e.g., Safeway, Tesco, or local stores in Kisumu).\n2. **Online retailers** (e.g., Amazon Kenya, Shopee, or local e-commerce platforms).\n3. **Government websites** (e.g., Kenya's Ministry of Agriculture or the Kenya Food and Livestock Commission).\n4. **Trade associations** or agricultural cooperatives in Kenya.\n\nIf you need specific pricing data, I recommend consulting a recent source or contacting a local market vendor directly for the most current information.",
+    "general": "I am a large language model developed by Alibaba Cloud, and I can perform various tasks such as answering questions, writing articles, coding, providing explanations, and more. If you have any questions or need help with something specific, feel free to ask!"
+  },
+  "finetuned": {
+    "tp_001": "I don't have data for February 2025.",
+    "tp_002": "I don't have the exact retail price for Rice (imported) in Kisumu, Kenya in September 2024 — I'm not built to recall individual price points from the past.",
+    "general": "I am WFP VAM price data for agricultural markets in Africa, through December 2024. I can answer questions about crop prices, trends, and comparisons between markets, but only if the data is available."
+  }
+}

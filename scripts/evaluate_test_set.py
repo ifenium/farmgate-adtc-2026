@@ -167,13 +167,15 @@ def grade_ranking(response: str, subtype: str, gold_value: dict) -> tuple[bool, 
 
     sorted_markets = sorted(gold_value.items(), key=lambda kv: kv[1])
     if subtype == "lowest":
-        expected = sorted_markets[0][0]
+        target = sorted_markets[0][1]
+        expected_set = {m for m, v in gold_value.items() if v == target}  # ties all correct
         predicted = min(positions, key=positions.get)
-        return (predicted == expected), ("correct" if predicted == expected else f"named_{predicted}_not_{expected}")
+        return (predicted in expected_set), ("correct" if predicted in expected_set else f"named_{predicted}_not_{sorted(expected_set)}")
     if subtype == "highest":
-        expected = sorted_markets[-1][0]
+        target = sorted_markets[-1][1]
+        expected_set = {m for m, v in gold_value.items() if v == target}  # ties all correct
         predicted = min(positions, key=positions.get)
-        return (predicted == expected), ("correct" if predicted == expected else f"named_{predicted}_not_{expected}")
+        return (predicted in expected_set), ("correct" if predicted in expected_set else f"named_{predicted}_not_{sorted(expected_set)}")
     # full_rank
     if len(positions) < len(gold_value):
         missing = set(gold_value) - set(positions)
