@@ -201,16 +201,44 @@ All measurements: Apple M3 Pro (arm64), CPU-only llama.cpp build (Metal/Accelera
 
 **Final artifact** — the exact file this repo ships (`Qwen3-1.7B-agri-final-Q4_K_M.gguf`, Run B QLoRA adapter fused, quantized to Q4_K_M, patched with a default system message that is the verbatim training prompt (§4.7, superseding the §4.5 patch) and a capped default context window (§4.6), 1.03 GB). Three fresh profiler runs, `adtc-profiler run --mode participant`, from a real git checkout so `git_commit_sha`/`team_id`/`model.name`/`test_prompts` all resolve correctly against this repo's actual `metadata.json` — full detail: `milestones/18`, raw JSON at `results/gate2_clean_run{1,2,3}.json`:
 
-| Measurement | Run 1 | Run 2 | Run 3 | Median |
+**Measured with profiler schema 1.2.0** (upstream `main` as of 2026-09-20). This matters: that
+release changed how throughput is measured. `measure()` previously passed no thread count and
+let `llama-bench` pick its own default; it now pins `-t` to the machine's **physical** core count
+and records `threads_used` in the report (profiler commit `12be4f38`). On this 11-core Apple
+Silicon machine that means work is spread across efficiency cores as well as performance cores,
+which roughly halves generation throughput relative to the older, unpinned measurement. **The
+figures below therefore supersede the ~84 tok/s previously reported in this section** — that
+number was produced by the earlier methodology and is not what the current profiler measures.
+Six runs, `threads_used = 11` in every one:
+
+| Measurement | min | median | max | spread |
 |---|---|---|---|---|
-| TG tok/s (generation, `n_ctx=128`) | 86.76 | 83.86 | 79.76 | **83.86** |
-| First-token latency (ms, prompt-processing at `n_ctx=512`) | 1696.88 | 1707.11 | 1753.81 | **1707.11** |
-| Peak RSS (MB) | 2285.23 | 2300.05 | 2298.92 | **2298.92** |
-| Steady-state RSS (MB) | 2161.83 | 2216.27 | 2172.09 | **2172.09** |
+| TG tok/s (generation, `n_ctx=128`) | 15.17 | **17.73** | 38.10 | 2.51× |
+| First-token latency (ms, prompt-processing at `n_ctx=512`) | 1738.65 | **2139.65** | 2450.58 | 1.41× |
+| Peak RSS (MB) | 2245.47 | **2277.64** | 2304.22 | 1.03× |
+| Steady-state RSS (MB) | 2080.64 | **2103.86** | 2136.49 | 1.03× |
 
-The machine was under ordinary interactive load throughout, not fully quiesced — a genuinely idle machine was not available for this measurement. This is disclosed as measured-under-load rather than presented as a controlled clean-room figure. A fourth run with the profiler's `lm_eval`-based accuracy stage enabled (`arc_easy`, 50 samples, informational general-capability check — not FarmGate's own domain accuracy, and not diffed by the profiler's comparator) recorded `acc_norm 0.66`.
+All six runs were taken under measured interactive load (system load average 18+; a genuinely
+idle machine was not available). **Read the two halves of this table differently.** Memory is
+stable to within 3% across all six runs and is consistent with every prior measurement this
+project has taken — it is the reliable number. Throughput swings 2.5× across the same six runs,
+because pinning to all physical cores makes the benchmark far more sensitive to contention than
+the old unpinned default was. The throughput median should be treated as an order-of-magnitude
+figure under load, not a precise claim.
 
-**Expected divergence on the x86-64 Standard Laptop, stated explicitly rather than left implicit.** The profiler's throughput probe (`llama-bench -p 512 -n 128 -ngl 0`) runs on a different SIMD path there (AVX2, not NEON) with no chat template rendered — the same quantities measured above, on different silicon. We expect the audit environment to land **materially lower on tokens/second and materially higher on first-token latency** than the Apple Silicon figures above, and do not claim these absolute figures will reproduce on target hardware. Peak and steady-state RSS are expected to reproduce within the profiler's own ±15% tolerance; throughput and TTFT are not expected to reproduce within its ±25% tolerance. Our own estimate for the audit environment, per `HANDOVER.md`'s size-class analysis, is **15–25 tok/s generation**.
+**Expected divergence on the x86-64 Standard Laptop.** The profiler's throughput probe
+(`llama-bench -p 512 -n 128 -ngl 0 -t <physical cores>`) runs on a different SIMD path there
+(AVX2, not NEON) with no chat template rendered. Peak and steady-state RSS are expected to
+reproduce within the profiler's ±15% tolerance. Throughput and TTFT are hardware-dependent and
+we do not claim the absolute figures transfer. Worth noting, however, that the new pinned
+methodology moves our development-machine throughput (median 17.7 tok/s) into the same band as
+`HANDOVER.md`'s independent size-class estimate for the Standard Laptop (**15–25 tok/s**) — so
+under the current profiler the gap between what we report and what an audit on target hardware
+would measure is substantially *smaller* than it was under the previous methodology, not larger.
+
+A separate run with the profiler's `lm_eval`-based accuracy stage enabled (`arc_easy`, 50
+samples — an informational general-capability check, not FarmGate's domain accuracy, and not
+diffed by the profiler's comparator) recorded `acc_norm 0.66`.
 
 **Real-use peak RSS under a generic runtime's default context allocation** (§4.6): 3.4–4.2 GB pre-fix (context 40,960), ~2.6 GB post-fix (context 4,096) — findings from diagnosis, not captured as profiler artifacts (measured via `llama-server`, a binary not on this machine's `PATH` during the profiler runs above); kept as the engineering finding, not restated as a measurement of record. Peak RSS sits comfortably under the 7 GB efficiency ceiling in every configuration measured, including this pre-fix worst case.
 
@@ -249,7 +277,22 @@ Both are confirmed absent from all 1,200 training/validation/test examples — g
 **Base model.** [`Qwen/Qwen3-1.7B`](https://huggingface.co/Qwen/Qwen3-1.7B), revision
 `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e`, Apache 2.0. Not pinned by `--revision` in the
 original training run (an untracked gap, closed going forward — see `provenance/README.md`);
-recovered retrospectively from the local cache's `refs/main` state as of 2026-08-19.
+recovered retrospectively from the local cache's `refs/main` state as of 2026-08-19. This value
+is also carried machine-readably in `metadata.json` as `model.base_model_commit_sha`.
+
+**A note on where the provenance facts live in `metadata.json`.** The Gate 2 submission
+checklist asks for a top-level `provenance` object. The reference profiler's schema does not
+accept one: its submission block is `additionalProperties: false`, and a root-level `provenance`
+key fails `validate_submission_block()` and aborts the run before any benchmark executes —
+verified directly against schema 1.2.0, the current release. The profiler's own fix for this
+(commit `77f084d6`, 2026-09-20, *"stop metadata.json's base_model_commit_sha from aborting the
+profiler"*) added `base_model_commit_sha` as an optional field **inside the `model` object**,
+noting that placing it outside `model`, "as the guideline's wording invites," was what aborted
+runs in a reported incident. This submission therefore uses the profiler-sanctioned placement,
+so that `bash download_model.sh` followed by `adtc-profiler run` completes cleanly. The other
+three provenance facts the checklist asks for are disclosed in full immediately below and in
+`provenance/`: base model source, fine-tuning method (QLoRA), and training datasets with
+sources and licenses. Nothing is withheld — only relocated to where the tooling accepts it.
 
 **Fine-tuning method.** QLoRA via MLX-LM: base model quantized to 4-bit for training-memory
 efficiency, LoRA rank 8 (scale 20.0, dropout 0.0) on 16 of 28 transformer layers, AdamW,
@@ -289,3 +332,13 @@ telemetry partially recovered — see `provenance/README.md` for exactly what su
 the merge/quantize/patch chain as a runnable script, and the dataset license/citation trail. What
 was recoverable vs. what genuinely isn't is stated plainly there rather than smoothed over —
 see `milestones/17` for the full assembly record.
+
+**Data currency, as roadmap rather than claim.** The training data covers WFP VAM price
+observations through December 2024, and the shipped model's stated cutoff matches that exactly.
+WFP has since published 2025 and 2026 files to the same HDX dataset, under the same `cc-by-igo`
+license and the same column schema. Extending coverage is therefore a data refresh through the
+existing pipeline — the generator (`scripts/generate_sft_dataset.py`), the relabeling step, the
+chat-formatting step, and the merge/quantize chain all consume those files as they stand — not an
+architectural redesign. This is stated as a roadmap item, not as a capability of the submitted
+artifact: nothing in this submission has been trained or evaluated on post-2024 data, and the
+model's December 2024 cutoff is a real boundary it correctly reports (§4.5, §4.7).

@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.2.0",
+  "profiler_version": "adtc-profiler 0.1.0",
+  "submission": {
+    "team_id": "ferrarri",
+    "domain": "agriculture",
+    "language_scope": [
+      "en"
+    ],
+    "african_alpha_claim": false,
+    "budget_laptop_claim": true,
+    "submitter": {
+      "name": "feoluwa Oyelakin",
+      "email": "oyeife@gmail.com",
+      "github_handle": "ifenium"
+    },
+    "cross_disciplinary_pairing": {
+      "discipline": "applied economics / data science",
+      "load_bearing": true,
+      "description": "Gold labels for the fine-tuning set are computed by verifiable arithmetic over WFP VAM's structured African market price data, not LLM-judged distillation."
+    },
+    "test_prompts": [
+      {
+        "prompt_id": "tp_001",
+        "prompt": "What was the retail price of Millet in Bama, Nigeria in February 2025?"
+      },
+      {
+        "prompt_id": "tp_002",
+        "prompt": "What was the retail price of Rice (imported) in Kisumu, Kenya in September 2024?"
+      }
+    ],
+    "model": {
+      "name": "Qwen3-1.7B-agri-final",
+      "runtime": "llama.cpp",
+      "quantization": "GGUF Q4_K_M",
+      "parameters_estimate": "1.7B",
+      "packaging": "binary_bundle",
+      "base_model_commit_sha": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+    }
+  },
+  "environment": {
+    "measured_on": "participant_laptop",
+    "cpu_model": "Apple M3 Pro",
+    "ram_gb": 18.0,
+    "gpu": "integrated only",
+    "os": "macOS-15.7.3-arm64-arm-64bit"
+  },
+  "throughput": {
+    "tokens_per_second_generation": 22.0,
+    "first_token_latency_ms": 2271.53,
+    "prompt_tokens": 512,
+    "generated_tokens": 128,
+    "threads_used": 11
+  },
+  "memory": {
+    "peak_rss_mb": 2256.64,
+    "steady_state_rss_mb": 2130.58,
+    "peak_vms_mb": 805611.25
+  },
+  "accuracy": [],
+  "cpu_thermal": {
+    "cpu_percent_p99": 100.0,
+    "core_temp_c_peak": null,
+    "throttled": false
+  },
+  "reproducibility": {
+    "git_commit_sha": "324f4c895655",
+    "docker_image_digest": "unknown",
+    "random_seed": 42
+  },
+  "model_info": {
+    "params_count": 1720574976,
+    "context_length": 4096,
+    "architecture": "qwen3",
+    "claimed_params_estimate": "1.7B",
+    "params_match": true
+  }
+}

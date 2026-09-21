@@ -31,10 +31,10 @@
     "runtime": "llama.cpp",
     "quantization": "GGUF Q4_K_M",
     "parameters_estimate": "1.7B",
-    "packaging": "binary_bundle"
+    "packaging": "binary_bundle",
+    "base_model_commit_sha": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
   },
   "_runtime": {
-    "model_path": "model/Qwen3-1.7B-agri-final-Q4_K_M.gguf",
-    "git_commit_sha": "ac7836dc38aeb072c2656a39beb5c78ff531d768"
+    "model_path": "model/Qwen3-1.7B-agri-final-Q4_K_M.gguf"
   }
 }
