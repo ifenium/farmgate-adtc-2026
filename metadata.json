@@ -19,7 +19,7 @@
   "test_prompts": [
     {
       "prompt_id": "tp_001",
-      "prompt": "What was the retail price of Millet in Bama, Nigeria in February 2025?"
+      "prompt": "One trader offers rice at 1,200 XOF for a 25 kg bag. Another offers 2,000 XOF for a 50 kg bag. Which is cheaper per kilo?"
     },
     {
       "prompt_id": "tp_002",
