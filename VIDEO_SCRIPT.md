@@ -1,27 +1,30 @@
 # FarmGate — 2-Minute Video Script
 
-**Hard limit: 2:00, strictly enforced.** Timings below total 1:57, leaving ~3s of headroom.
-Narration is ~285 words ≈ 115 wpm, a deliberate, unhurried pace. Demo segments are screen
-recording with voiceover over them, not talking-head.
+**Hard limit: 2:00, strictly enforced.** Timings total 1:56. Narration ~290 words ≈ 115 wpm,
+deliberate pace. Demo segments are screen recording with voiceover, not talking-head.
 
-**Everything stated in this script is verified.** No claim here rests on `cross_market_ranking`
-(disclosed as a data-generation artifact, `REPORT.md` §4.8) or on `trend_change`/`yoy_comparison`
-(unresolved mode collapse, §4.4). Claims trace to: §4.3, §4.7, `provenance/before_after/`, and
-the Round 1 judge scorecard.
+**RECORD WITH THE SUBMITTED BUILD:** `Qwen3-1.7B-agri-final-Q4_K_M.gguf`, sha256
+`6508b723…`. In LM Studio that is the entry named **`Qwen3-1.7B-agri-final`**. Do **not**
+record with `Qwen3-1.7B-agri-round1-9c2241` — that is the superseded Round 1 build and is not
+what `download_model.sh` delivers. The video must show the model that was actually submitted.
+
+**Every claim below is verified against the shipped build.** Nothing here rests on
+`cross_market_ranking` (§4.8 — data-generation artifact), `trend_change`/`yoy_comparison`
+(§4.4 — mode collapse), or mental arithmetic (regressed on this build — see the note at the
+bottom). Sources: §4.3, §4.7, `provenance/before_after/`.
 
 ---
 
 ## [0:00–0:30] Elevator pitch
 
 **VISUAL:** Title card — *FarmGate · Offline agricultural market prices · Qwen3 1.7B · 1.03 GB*.
-Then a plain shot of the model answering one question with no internet indicator / airplane-mode
-icon visible.
+Then the model answering one question, with airplane-mode / disconnected-network visible.
 
 **NARRATION:**
 
-> A trader in northern Nigeria wants to know if the price she's being offered for millet is fair.
-> The data exists — the World Food Programme publishes it. But it's a spreadsheet, it's online,
-> and she has neither.
+> A trader in northern Nigeria wants to know whether the price she's being offered for millet is
+> fair. The data exists — the World Food Programme publishes it. But it's a spreadsheet, it's
+> online, and she has neither.
 >
 > FarmGate is a one-gigabyte assistant that answers market-price questions completely offline,
 > on a refurbished laptop, with no API key and no connection. It's Qwen3 1.7B, fine-tuned on
@@ -31,50 +34,62 @@ icon visible.
 
 ---
 
-## [0:30–1:30] Demonstration
+## [0:30–1:15] Demonstration — live, one continuous take
 
-**VISUAL:** Live screen recording, one continuous take, no cuts. Show the actual chat interface.
-Type each prompt, let the answer stream. Keep the system prompt field visibly empty.
+**VISUAL:** Real LM Studio chat. System prompt field visibly **empty**. Type each prompt, let the
+answer stream. No cuts.
 
-**PROMPT 1 — the arithmetic** *(this is Judge 1's own Round 1 question)*
-
-> Type: `Maize was 450 CFA/kg in Lomé last month and is 520 now. What's the percentage change?`
-
-Model returns **15.56%**, with the calculation shown.
-
-**NARRATION over it:**
-> Give it numbers, and the arithmetic is solid. A Round 1 judge tested exactly this. Their
-> verdict was three words: "The arithmetic works."
-
-**PROMPT 2 — the refusal that matters** *(submitted test prompt `tp_002`)*
+**PROMPT 1 — refusing to invent a price** *(submitted test prompt `tp_002`)*
 
 > Type: `What was the retail price of Rice (imported) in Kisumu, Kenya in September 2024?`
 
-Model returns the calibrated hedge: *"I don't have the exact retail price for Rice (imported)
-in Kisumu, Kenya in September 2024 — I'm not built to recall individual price points from the
-past."*
+Returns: *"I don't have the exact retail price for Rice (imported) in Kisumu, Kenya in September
+2024 — I'm not built to recall individual price points from the past."*
 
 **NARRATION over it:**
-> Ask it to recall one specific historical price, and it declines — every time, on a hundred
-> percent of held-out tests. A 1.7-billion-parameter model cannot memorise hundreds of thousands
-> of prices. We proved that to ourselves with a gated experiment and stopped it at six percent.
-> So instead of pretending, it says so.
+> Ask it to recall one specific historical price, and it declines. Every time — a hundred percent
+> of held-out tests. A 1.7-billion-parameter model cannot memorise hundreds of thousands of
+> prices. We proved that to ourselves with a gated experiment and stopped it at six percent. So
+> rather than pretending, it says so.
 
-**PROMPT 3 — knowing where the data ends** *(submitted test prompt `tp_001`)*
+**PROMPT 2 — knowing where the data ends** *(submitted test prompt `tp_001`)*
 
 > Type: `What was the retail price of Millet in Bama, Nigeria in February 2025?`
 
-Model returns: *"I don't have data for February 2025."*
+Returns: *"I don't have data for February 2025."*
 
 **NARRATION over it:**
-> And it knows where its data ends. Bama is a real market it has real history for — but February
-> 2025 is past its cutoff, and it says so rather than inventing a number.
+> And it knows where its data ends. Bama is a real market it has genuine 2024 history for — but
+> February 2025 is past its cutoff. It doesn't extrapolate. It stops.
 
 ---
 
-## [1:30–2:00] Core innovation
+## [1:15–1:30] What fine-tuning actually changed
 
-**VISUAL:** A single clean slide. Two rows, before and after:
+**VISUAL:** Comparison slide, two columns, same question to both models. Label the left column
+*"Base Qwen3 1.7B"* and the right *"FarmGate"*. Quote verbatim — these are real recorded outputs
+from `provenance/before_after/`, not mock-ups:
+
+```
+            "What was the retail price of Rice (imported) in Kisumu, Kenya in September 2024?"
+
+BASE Qwen3 1.7B                          FARMGATE
+"…you might want to check:               "I don't have the exact retail price
+ 1. Local supermarkets (e.g.,             for Rice (imported) in Kisumu, Kenya
+ Safeway, Tesco, or local stores          in September 2024 — I'm not built to
+ in Kisumu)…"                             recall individual price points."
+```
+
+**NARRATION:**
+> The base model answers the same question by suggesting Safeway and Tesco — neither of which
+> operates in Kisumu. Ours states a real capability boundary instead. That's the difference
+> fine-tuning bought.
+
+---
+
+## [1:30–1:56] Core innovation
+
+**VISUAL:** Single clean slide:
 
 ```
 state_at_time        0/50   →   50/50
@@ -88,8 +103,8 @@ gap_within_range     0/13   →   13/13      ← its training data was never tou
 > against one hundred. The model learned the majority lesson and fabricated confidently.
 >
 > We relabelled the first group to an honest hedge. That fixed it — and it also fixed the second
-> group completely, without changing a single one of its examples. Removing the contradiction
-> was the whole fix.
+> group completely, without changing a single one of its examples. Removing the contradiction was
+> the whole fix.
 >
 > Every label in our training set is computed by arithmetic from real data — never written by
 > hand, never generated by another model. That's what made the diagnosis possible.
@@ -100,15 +115,27 @@ gap_within_range     0/13   →   13/13      ← its training data was never tou
 
 ## Production notes
 
-- **Do not demo ranking.** `cross_market_ranking` scores well only because the generator listed
-  markets in price order; it collapses to 0/6 when that order is broken (§4.8). It is disclosed
-  in the report and must not appear in the video.
-- **Do not demo trend or year-over-year.** Unresolved mode collapse (§4.4).
-- **Do not ask the model to introduce itself, and do not ask it for an example.** That trigger
-  reliably produces fabricated markets and post-cutoff dates (§4.5, `milestones/20`).
-- **Leave the system prompt empty** in whatever interface is recorded, so the model's own
-  embedded default fires — this is both the judge condition and the condition the shipped fix
-  targets (§4.7).
-- Record with the network physically disconnected and show it; the offline claim is the pitch.
-- If any prompt needs a retake, retake the whole continuous demo segment rather than splicing —
-  a cut mid-demo invites the question of what was edited out.
+**Setup before recording**
+- Load **`Qwen3-1.7B-agri-final`** (sha `6508b723…`). Confirm it, don't assume — LM Studio also
+  holds `Qwen3-1.7B-agri-round1-9c2241`, which is the wrong build.
+- **System prompt field empty.** The model carries its own default inside the GGUF; anything you
+  type there overrides it and you stop demoing shipped behaviour.
+- **Start a new chat.** LM Studio freezes a chat-template snapshot into saved conversations;
+  older ones carry a superseded template.
+- Network physically disconnected and visible on screen.
+- If a prompt needs a retake, retake the whole continuous demo segment rather than splicing. A
+  cut mid-demo invites the question of what was edited out.
+
+**Do not demo — all disclosed weaknesses**
+- **Mental arithmetic.** *Removed from this script.* The build shipped for Gate 2 returns
+  "40.00%" on the 450→520 CFA percentage-change question while showing the correct 15.56% in its
+  own working (deterministic, 3/3). Judge 1 praised this capability in Round 1, but that was the
+  pre-v3 build; the default-system-prompt change regressed it. Do not put arithmetic on screen.
+- **Market ranking** (§4.8) — scores well only because the dataset generator listed markets in
+  price order; collapses 6/6 → 0/6 when that order is broken.
+- **Price trends / year-on-year** (§4.4) — unresolved mode collapse, one canned direction
+  regardless of the facts.
+- **Self-introduction, and any "for example" framing** (§4.5, `milestones/20`) — reliably
+  fabricates invented market-to-country pairings and post-cutoff dates. Note this makes the
+  *slide* in segment three safe (it quotes a pre-verified recording) but asking the model live
+  to introduce itself is not.
